@@ -1,0 +1,183 @@
+{
+  "generated_at": "2026-09-09T13:33:44+00:00",
+  "config": {
+    "source": "CrUX field data (real users, p75, rolling 28 days)",
+    "mobile_weight": 0.65,
+    "cwv_good_thresholds": {
+      "largest_contentful_paint": 2500,
+      "interaction_to_next_paint": 200,
+      "cumulative_layout_shift": 0.1
+    },
+    "scoring_anchors": {
+      "largest_contentful_paint": [
+        [
+          0,
+          100
+        ],
+        [
+          2500,
+          90
+        ],
+        [
+          4000,
+          50
+        ],
+        [
+          6000,
+          0
+        ]
+      ],
+      "interaction_to_next_paint": [
+        [
+          0,
+          100
+        ],
+        [
+          200,
+          90
+        ],
+        [
+          500,
+          50
+        ],
+        [
+          1000,
+          0
+        ]
+      ],
+      "cumulative_layout_shift": [
+        [
+          0.0,
+          100
+        ],
+        [
+          0.1,
+          90
+        ],
+        [
+          0.25,
+          50
+        ],
+        [
+          0.5,
+          0
+        ]
+      ]
+    },
+    "dry_run": true
+  },
+  "brands": [
+    {
+      "name": "Celine",
+      "category": "Maison",
+      "origin": "https://www.celine.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 85.5,
+        "score_1_10": 8.6,
+        "phone": {
+          "score": 84.3,
+          "cwv_pass": false,
+          "lcp_ms": 2680,
+          "inp_ms": 278,
+          "cls": 0.107,
+          "fcp_ms": 1706,
+          "ttfb_ms": 702
+        },
+        "desktop": {
+          "score": 87.7,
+          "cwv_pass": false,
+          "lcp_ms": 2838,
+          "inp_ms": 127,
+          "cls": 0.106,
+          "fcp_ms": 1912,
+          "ttfb_ms": 292
+        }
+      }
+    },
+    {
+      "name": "Acne Studios",
+      "category": "Maison",
+      "origin": "https://www.acnestudios.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 79.4,
+        "score_1_10": 7.9,
+        "phone": {
+          "score": 72.5,
+          "cwv_pass": false,
+          "lcp_ms": 3391,
+          "inp_ms": 299,
+          "cls": 0.158,
+          "fcp_ms": 2482,
+          "ttfb_ms": 750
+        },
+        "desktop": {
+          "score": 92.1,
+          "cwv_pass": true,
+          "lcp_ms": 2025,
+          "inp_ms": 141,
+          "cls": 0.085,
+          "fcp_ms": 1481,
+          "ttfb_ms": 544
+        }
+      }
+    },
+    {
+      "name": "Louis Vuitton",
+      "category": "Maison",
+      "origin": "https://us.louisvuitton.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 75.9,
+        "score_1_10": 7.6,
+        "phone": {
+          "score": 65.6,
+          "cwv_pass": false,
+          "lcp_ms": 3946,
+          "inp_ms": 327,
+          "cls": 0.166,
+          "fcp_ms": 2222,
+          "ttfb_ms": 484
+        },
+        "desktop": {
+          "score": 95.0,
+          "cwv_pass": true,
+          "lcp_ms": 1583,
+          "inp_ms": 110,
+          "cls": 0.032,
+          "fcp_ms": 1755,
+          "ttfb_ms": 732
+        }
+      }
+    },
+    {
+      "name": "Givenchy",
+      "category": "Maison",
+      "origin": "https://www.givenchy.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 74.5,
+        "score_1_10": 7.5,
+        "phone": {
+          "score": 71.4,
+          "cwv_pass": false,
+          "lcp_ms": 4204,
+          "inp_ms": 188,
+          "cls": 0.142,
+          "fcp_ms": 1885,
+          "ttfb_ms": 544
+        },
+        "desktop": {
+          "score": 80.3,
+          "cwv_pass": false,
+          "lcp_ms": 2650,
+          "inp_ms": 185,
+          "cls": 0.197,
+          "fcp_ms": 1887,
+          "ttfb_ms": 306
+        }
+      }
+    }
+  ]
+}

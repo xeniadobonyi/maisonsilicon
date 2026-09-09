@@ -1,0 +1,10 @@
+{
+  "mobile_weight": 0.65,
+  "_comment": "CrUX is origin-exact. Before the first real run, paste each origin into a browser and copy whatever stays in the address bar AFTER redirects — that is the origin CrUX has data for. Louis Vuitton especially splits traffic across regional subdomains (us., fr., www.), so verify which one your audience uses. Scheme + host only, no path.",
+  "brands": [
+    { "name": "Louis Vuitton", "category": "Maison", "origin": "https://us.louisvuitton.com" },
+    { "name": "Celine",        "category": "Maison", "origin": "https://www.celine.com" },
+    { "name": "Givenchy",      "category": "Maison", "origin": "https://www.givenchy.com" },
+    { "name": "Acne Studios",  "category": "Maison", "origin": "https://www.acnestudios.com" }
+  ]
+}

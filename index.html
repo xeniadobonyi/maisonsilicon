@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Maison &amp; Silicon</title>
+<style>
+  body{
+    background:#ffffff; color:#000000;
+    font-family:"Times New Roman", Times, serif; font-size:16px;
+    margin:24px; line-height:1.4;
+  }
+  h1{font-size:26px; font-weight:bold; margin:0 0 6px;}
+  p{margin:6px 0;}
+  a{color:#0000ee;} a:visited{color:#551a8b;}
+  table{border-collapse:collapse; margin:14px 0;}
+  th,td{border:1px solid #000000; padding:5px 9px; text-align:left; vertical-align:top; font-size:15px;}
+  th{font-weight:bold;}
+  .num{text-align:right;}
+  .grade{font-weight:bold; font-size:19px;}
+  .meet{color:#008000;}
+  .miss{color:#cc0000;}
+  .small{font-size:13px;}
+  .tablewrap{overflow-x:auto;}
+  hr{border:0; border-top:1px solid #000000; margin:18px 0;}
+</style>
+</head>
+<body>
+
+<h1>Maison &amp; Silicon</h1>
+<p>Luxury and premium-tech brands, rated on performance, design, and agentic readiness &middot; 2026 edition</p>
+<p id="asof"></p>
+
+<hr />
+
+<div class="tablewrap">
+  <table id="board" hidden>
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Maison</th>
+        <th>Category</th>
+        <th>Mobile (LCP / INP / CLS)</th>
+        <th>Desktop (LCP / INP / CLS)</th>
+        <th>Trend</th>
+        <th>Grade</th>
+        <th class="num">Score</th>
+      </tr>
+    </thead>
+    <tbody id="rows"></tbody>
+  </table>
+</div>
+
+<div id="message"></div>
+
+<hr />
+
+<p class="small" id="legend" hidden></p>
+<p class="small" id="footer" hidden></p>
+
+<script>
+"use strict";
+
+const GRADES = [[90,"AAA"],[85,"AA"],[80,"A"],[75,"BBB"],[70,"BB"],[65,"B"],[60,"CCC"],[0,"CC"]];
+function gradeFor(s){ if(s==null) return "NR"; for(const [f,g] of GRADES) if(s>=f) return g; return "CC"; }
+
+async function boot(){
+  let latest;
+  try{
+    latest = await (await fetch("./results/latest.json",{cache:"no-store"})).json();
+  }catch(e){
+    return showMessage(
+      'Cannot read <code>results/latest.json</code>. If you are previewing on your machine, run '+
+      '<code>python -m http.server</code> in this folder and open the localhost address; browsers '+
+      'block file reads over file://. On GitHub Pages it loads on its own.'
+    );
+  }
+  let history = {};
+  try{ history = parseHistory(await (await fetch("./results/history.csv",{cache:"no-store"})).text()); }
+  catch(e){ /* trend optional */ }
+  render(latest, history);
+}
+
+function parseHistory(csv){
+  const lines = csv.trim().split(/\r?\n/);
+  if(lines.length < 2) return {};
+  const head = lines[0].split(",");
+  const bi = head.indexOf("brand"), di = head.indexOf("date"), si = head.indexOf("score_0_100");
+  const out = {};
+  for(let i=1;i<lines.length;i++){
+    const c = lines[i].split(",");
+    const b=c[bi], d=c[di], s=parseFloat(c[si]);
+    if(!b || isNaN(s)) continue;
+    (out[b]=out[b]||[]).push({date:d, score:s});
+  }
+  for(const b in out) out[b].sort((x,y)=> x.date<y.date?-1:1);
+  return out;
+}
+
+function trendText(scores){
+  if(!scores || scores.length < 2) return "building";
+  const d = scores[scores.length-1] - scores[0];
+  const wks = scores.length;
+  if(Math.abs(d) < 0.5) return "steady (" + wks + " wks)";
+  return (d>0 ? "up " : "down ") + Math.abs(d).toFixed(1) + " (" + wks + " wks)";
+}
+
+function vitals(ff){
+  if(!ff) return "no data";
+  const parts = [];
+  parts.push(ff.lcp_ms!=null ? (ff.lcp_ms/1000).toFixed(1)+"s" : "\u2014");
+  parts.push(ff.inp_ms!=null ? ff.inp_ms+"ms" : "\u2014");
+  parts.push(ff.cls!=null ? ff.cls : "\u2014");
+  let verdict = "";
+  if(ff.cwv_pass===true)  verdict = ' <span class="meet">(meets targets)</span>';
+  if(ff.cwv_pass===false) verdict = ' <span class="miss">(below targets)</span>';
+  return parts.join(" / ") + verdict;
+}
+
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+
+function fmtDate(iso){
+  const d = new Date(iso);
+  if(isNaN(d)) return iso || "an earlier reading";
+  return d.toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"});
+}
+
+function render(latest, history){
+  const brands = (latest.brands||[]).slice()
+    .sort((a,b)=> (b.performance.score_0_100||-1)-(a.performance.score_0_100||-1));
+
+  document.getElementById("rows").innerHTML = brands.map((b,i)=>{
+    const p = b.performance;
+    const score = p.score_0_100;
+    const scores = (history[b.name]||[]).map(r=>r.score);
+    const name = b.origin
+      ? '<a href="'+esc(b.origin)+'" target="_blank" rel="noopener">'+esc(b.name)+'</a>'
+      : esc(b.name);
+    const scoreCell = score!=null ? score + '<br><span class="small">'+p.score_1_10+' / 10</span>' : "\u2014";
+    return "<tr>"+
+      '<td class="num">'+(i+1)+"</td>"+
+      "<td>"+name+"</td>"+
+      "<td>"+esc(b.category||"")+"</td>"+
+      "<td>"+vitals(p.phone)+"</td>"+
+      "<td>"+vitals(p.desktop)+"</td>"+
+      "<td>"+trendText(scores)+"</td>"+
+      '<td class="grade">'+gradeFor(score)+"</td>"+
+      '<td class="num">'+scoreCell+"</td>"+
+    "</tr>";
+  }).join("");
+
+  document.getElementById("board").hidden = false;
+  document.getElementById("asof").innerHTML =
+    "As of " + fmtDate(latest.generated_at) + ". Updated on the first of each month.";
+
+  const legend = document.getElementById("legend");
+  legend.hidden = false;
+  legend.innerHTML =
+    "Grades: AAA / AA / A strong, BBB / BB middling, B / CCC / CC poor, NR not rated (too little "+
+    "traffic for reliable data). A maison meets targets only when LCP, INP and CLS are all within "+
+    "Google's good range.";
+
+  const foot = document.getElementById("footer");
+  foot.hidden = false;
+  foot.textContent =
+    "Source: Google Chrome UX Report, 75th percentile of real Chrome visits over a rolling 28-day "+
+    "window, blended 65% mobile / 35% desktop. Field data covers the whole site, not a single page.";
+}
+
+function showMessage(html){
+  document.getElementById("asof").textContent = "";
+  document.getElementById("message").innerHTML = "<p>"+html+"</p>";
+}
+
+boot();
+</script>
+</body>
+</html>

@@ -3,26 +3,122 @@ date,brand,category,score_0_100,score_1_10,phone_lcp,phone_inp,phone_cls
 2026-03-15,Celine,Maison,76.1,7.6,3223,412,0.16
 2026-03-15,Givenchy,Maison,87.8,8.8,2678,177,0.068
 2026-03-15,Louis Vuitton,Maison,84.5,8.4,3260,170,0.113
+2026-03-21,Acne Studios,Maison,96.7,9.7,1069,151,
+2026-03-21,Celine,Maison,93.0,9.3,2332,220,0.02
+2026-03-21,Givenchy,Maison,86.6,8.7,3487,221,0.01
+2026-03-21,Louis Vuitton,Maison,80.0,8.0,1503,206,0.21
+2026-03-28,Acne Studios,Maison,96.7,9.7,1076,148,
+2026-03-28,Celine,Maison,93.0,9.3,2353,219,0.02
+2026-03-28,Givenchy,Maison,86.0,8.6,3568,224,0.01
+2026-03-28,Louis Vuitton,Maison,79.8,8.0,1555,208,0.21
+2026-04-04,Acne Studios,Maison,96.7,9.7,1063,146,
+2026-04-04,Celine,Maison,93.2,9.3,2302,215,0.02
+2026-04-04,Givenchy,Maison,85.3,8.5,3660,226,0.01
+2026-04-04,Louis Vuitton,Maison,77.6,7.8,1583,209,0.22
+2026-04-11,Acne Studios,Maison,96.7,9.7,1053,146,
+2026-04-11,Celine,Maison,93.2,9.3,2263,215,0.02
+2026-04-11,Givenchy,Maison,85.2,8.5,3658,224,0.01
+2026-04-11,Louis Vuitton,Maison,74.6,7.5,1592,208,0.22
 2026-04-15,Acne Studios,Maison,74.3,7.4,4145,300,0.175
 2026-04-15,Celine,Maison,67.3,6.7,4764,325,0.218
 2026-04-15,Givenchy,Maison,84.8,8.5,2743,333,0.04
 2026-04-15,Louis Vuitton,Maison,78.9,7.9,3791,306,0.129
+2026-04-18,Acne Studios,Maison,96.7,9.7,1054,144,
+2026-04-18,Celine,Maison,93.0,9.3,2261,216,0.03
+2026-04-18,Givenchy,Maison,84.7,8.5,3727,222,0.01
+2026-04-18,Louis Vuitton,Maison,74.1,7.4,1558,208,0.22
+2026-04-25,Acne Studios,Maison,96.8,9.7,1031,140,
+2026-04-25,Celine,Maison,92.6,9.3,2291,225,0.03
+2026-04-25,Givenchy,Maison,85.0,8.5,3712,219,0.01
+2026-04-25,Louis Vuitton,Maison,74.0,7.4,1517,205,0.22
+2026-05-02,Acne Studios,Maison,96.9,9.7,1010,138,
+2026-05-02,Celine,Maison,91.7,9.2,2350,244,0.04
+2026-05-02,Givenchy,Maison,85.8,8.6,3622,212,0.01
+2026-05-02,Louis Vuitton,Maison,74.8,7.5,1549,205,0.21
+2026-05-09,Acne Studios,Maison,97.0,9.7,972,133,
+2026-05-09,Celine,Maison,90.6,9.1,2408,257,0.07
+2026-05-09,Givenchy,Maison,86.8,8.7,3506,204,0.01
+2026-05-09,Louis Vuitton,Maison,76.9,7.7,1587,204,0.19
 2026-05-15,Acne Studios,Maison,76.7,7.7,3369,247,0.199
 2026-05-15,Celine,Maison,79.4,7.9,4688,173,0.07
 2026-05-15,Givenchy,Maison,89.3,8.9,3196,161,0.034
 2026-05-15,Louis Vuitton,Maison,76.1,7.6,2698,379,0.202
+2026-05-16,Acne Studios,Maison,97.0,9.7,954,132,
+2026-05-16,Celine,Maison,90.0,9.0,2444,268,0.08
+2026-05-16,Givenchy,Maison,87.6,8.8,3416,200,0.01
+2026-05-16,Louis Vuitton,Maison,78.6,7.9,1642,204,0.17
+2026-05-23,Acne Studios,Maison,97.0,9.7,935,132,
+2026-05-23,Celine,Maison,89.9,9.0,2443,268,0.08
+2026-05-23,Givenchy,Maison,87.9,8.8,3359,196,0.01
+2026-05-23,Louis Vuitton,Maison,80.1,8.0,1731,205,0.16
+2026-05-30,Acne Studios,Maison,97.0,9.7,937,131,
+2026-05-30,Celine,Maison,90.2,9.0,2436,260,0.08
+2026-05-30,Givenchy,Maison,87.9,8.8,3363,195,0.01
+2026-05-30,Louis Vuitton,Maison,81.1,8.1,1743,205,0.15
+2026-06-06,Acne Studios,Maison,97.0,9.7,956,135,
+2026-06-06,Celine,Maison,90.2,9.0,2465,258,0.08
+2026-06-06,Givenchy,Maison,87.7,8.8,3379,196,0.01
+2026-06-06,Louis Vuitton,Maison,81.1,8.1,1739,206,0.15
+2026-06-13,Acne Studios,Maison,97.0,9.7,954,133,
+2026-06-13,Celine,Maison,90.2,9.0,2500,259,0.08
+2026-06-13,Givenchy,Maison,87.4,8.7,3429,196,0.01
+2026-06-13,Louis Vuitton,Maison,81.5,8.2,1750,204,0.15
 2026-06-15,Acne Studios,Maison,74.8,7.5,3395,373,0.203
 2026-06-15,Celine,Maison,78.5,7.8,3167,279,0.176
 2026-06-15,Givenchy,Maison,81.1,8.1,3740,297,0.087
 2026-06-15,Louis Vuitton,Maison,70.8,7.1,4738,174,0.196
+2026-06-20,Acne Studios,Maison,97.0,9.7,966,133,
+2026-06-20,Celine,Maison,89.9,9.0,2533,261,0.08
+2026-06-20,Givenchy,Maison,87.1,8.7,3459,200,0.01
+2026-06-20,Louis Vuitton,Maison,82.0,8.2,1696,196,0.15
+2026-06-27,Acne Studios,Maison,97.0,9.7,961,134,
+2026-06-27,Celine,Maison,89.6,9.0,2574,262,0.08
+2026-06-27,Givenchy,Maison,86.7,8.7,3481,203,0.01
+2026-06-27,Louis Vuitton,Maison,82.4,8.2,1673,188,0.15
+2026-07-04,Acne Studios,Maison,97.0,9.7,961,136,
+2026-07-04,Celine,Maison,89.7,9.0,2600,263,0.07
+2026-07-04,Givenchy,Maison,86.6,8.7,3472,204,0.01
+2026-07-04,Louis Vuitton,Maison,83.3,8.3,1684,186,0.14
+2026-07-11,Acne Studios,Maison,96.9,9.7,966,137,
+2026-07-11,Celine,Maison,88.9,8.9,2621,291,0.06
+2026-07-11,Givenchy,Maison,86.6,8.7,3451,204,0.01
+2026-07-11,Louis Vuitton,Maison,84.1,8.4,1702,181,0.13
 2026-07-15,Acne Studios,Maison,78.4,7.8,4117,223,0.146
 2026-07-15,Celine,Maison,86.2,8.6,2686,323,0.097
 2026-07-15,Givenchy,Maison,72.7,7.3,4012,256,0.218
 2026-07-15,Louis Vuitton,Maison,71.4,7.1,4577,353,0.152
-2026-08-15,Acne Studios,Maison,76.6,7.7,3887,218,0.187
-2026-08-15,Celine,Maison,78.6,7.9,4019,331,0.085
-2026-08-15,Givenchy,Maison,73.5,7.3,4029,358,0.099
-2026-08-15,Louis Vuitton,Maison,75.8,7.6,3474,353,0.134
+2026-07-18,Acne Studios,Maison,96.9,9.7,963,138,
+2026-07-18,Celine,Maison,87.3,8.7,2651,338,0.06
+2026-07-18,Givenchy,Maison,86.6,8.7,3472,202,0.01
+2026-07-18,Louis Vuitton,Maison,84.8,8.5,1744,186,0.12
+2026-07-25,Acne Studios,Maison,96.9,9.7,960,138,
+2026-07-25,Celine,Maison,85.2,8.5,2661,405,0.06
+2026-07-25,Givenchy,Maison,86.5,8.7,3512,201,0.01
+2026-07-25,Louis Vuitton,Maison,85.0,8.5,1792,187,0.12
+2026-08-01,Acne Studios,Maison,97.0,9.7,943,136,
+2026-08-01,Celine,Maison,82.0,8.2,2638,503,0.08
+2026-08-01,Givenchy,Maison,86.0,8.6,3584,204,0.01
+2026-08-01,Louis Vuitton,Maison,85.0,8.5,1788,191,0.11
+2026-08-08,Acne Studios,Maison,97.0,9.7,950,137,
+2026-08-08,Celine,Maison,81.6,8.2,2617,531,0.08
+2026-08-08,Givenchy,Maison,85.8,8.6,3621,206,0.01
+2026-08-08,Louis Vuitton,Maison,85.4,8.5,1738,194,0.1
+2026-08-15,Acne Studios,Maison,97.0,9.7,951,137,
+2026-08-15,Celine,Maison,81.6,8.2,2613,532,0.08
+2026-08-15,Givenchy,Maison,85.7,8.6,3609,210,0.01
+2026-08-15,Louis Vuitton,Maison,85.2,8.5,1677,194,0.1
+2026-08-22,Acne Studios,Maison,96.9,9.7,961,139,
+2026-08-22,Celine,Maison,81.6,8.2,2613,530,0.08
+2026-08-22,Givenchy,Maison,85.6,8.6,3639,213,0.01
+2026-08-22,Louis Vuitton,Maison,85.1,8.5,1608,195,0.1
+2026-08-29,Acne Studios,Maison,96.8,9.7,966,146,
+2026-08-29,Celine,Maison,81.8,8.2,2629,518,0.08
+2026-08-29,Givenchy,Maison,86.1,8.6,3586,213,0.01
+2026-08-29,Louis Vuitton,Maison,85.5,8.6,1584,195,0.1
+2026-09-05,Acne Studios,Maison,96.8,9.7,960,147,
+2026-09-05,Celine,Maison,82.0,8.2,2638,507,0.08
+2026-09-05,Givenchy,Maison,86.7,8.7,3485,212,0.01
+2026-09-05,Louis Vuitton,Maison,86.0,8.6,1600,196,0.1
 2026-09-15,Acne Studios,Maison,77.8,7.8,4137,218,0.082
 2026-09-15,Celine,Maison,81.6,8.2,3371,180,0.064
 2026-09-15,Givenchy,Maison,80.2,8.0,3055,241,0.156

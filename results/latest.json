@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-09T19:25:19+00:00",
+  "generated_at": "2026-09-10T08:28:31+00:00",
   "config": {
     "source": "CrUX field data (real users, p75, rolling 28 days)",
     "mobile_weight": 0.65,
@@ -68,6 +68,34 @@
   },
   "brands": [
     {
+      "name": "Rick Owens",
+      "category": "Maison",
+      "origin": "https://www.rickowens.eu",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 96.8,
+        "score_1_10": 9.7,
+        "phone": {
+          "score": 96.4,
+          "cwv_pass": true,
+          "lcp_ms": 1199,
+          "inp_ms": 119,
+          "cls": 0.0,
+          "fcp_ms": 1032,
+          "ttfb_ms": 594
+        },
+        "desktop": {
+          "score": 97.4,
+          "cwv_pass": true,
+          "lcp_ms": 1172,
+          "inp_ms": 61,
+          "cls": 0.0,
+          "fcp_ms": 878,
+          "ttfb_ms": 524
+        }
+      }
+    },
+    {
       "name": "Acne Studios",
       "category": "Maison",
       "origin": "https://www.acnestudios.com",
@@ -76,22 +104,330 @@
         "score_0_100": 96.8,
         "score_1_10": 9.7,
         "phone": {
-          "score": 96.3,
+          "score": 96.2,
           "cwv_pass": true,
-          "lcp_ms": 962,
-          "inp_ms": 147,
+          "lcp_ms": 967,
+          "inp_ms": 148,
           "cls": 0.0,
-          "fcp_ms": 814,
+          "fcp_ms": 815,
           "ttfb_ms": 372
         },
         "desktop": {
           "score": 97.8,
           "cwv_pass": true,
-          "lcp_ms": 653,
+          "lcp_ms": 656,
           "inp_ms": 81,
           "cls": 0.0,
-          "fcp_ms": 545,
+          "fcp_ms": 546,
           "ttfb_ms": 309
+        }
+      }
+    },
+    {
+      "name": "Burberry",
+      "category": "Maison",
+      "origin": "https://www.burberry.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 96.7,
+        "score_1_10": 9.7,
+        "phone": {
+          "score": 96.2,
+          "cwv_pass": true,
+          "lcp_ms": 1513,
+          "inp_ms": 85,
+          "cls": 0.01,
+          "fcp_ms": 1412,
+          "ttfb_ms": 896
+        },
+        "desktop": {
+          "score": 97.5,
+          "cwv_pass": true,
+          "lcp_ms": 1298,
+          "inp_ms": 45,
+          "cls": 0.0,
+          "fcp_ms": 1272,
+          "ttfb_ms": 846
+        }
+      }
+    },
+    {
+      "name": "Jacquemus",
+      "category": "Maison",
+      "origin": "https://www.jacquemus.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 96.2,
+        "score_1_10": 9.6,
+        "phone": {
+          "score": 95.8,
+          "cwv_pass": true,
+          "lcp_ms": 1707,
+          "inp_ms": 117,
+          "cls": 0.0,
+          "fcp_ms": 1316,
+          "ttfb_ms": 873
+        },
+        "desktop": {
+          "score": 97.0,
+          "cwv_pass": true,
+          "lcp_ms": 1441,
+          "inp_ms": 65,
+          "cls": 0.0,
+          "fcp_ms": 1107,
+          "ttfb_ms": 795
+        }
+      }
+    },
+    {
+      "name": "Kenzo",
+      "category": "Maison",
+      "origin": "https://www.kenzo.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 93.9,
+        "score_1_10": 9.4,
+        "phone": {
+          "score": 95.2,
+          "cwv_pass": true,
+          "lcp_ms": 1995,
+          "inp_ms": 128,
+          "cls": 0.0,
+          "fcp_ms": 1604,
+          "ttfb_ms": 1006
+        },
+        "desktop": {
+          "score": 91.5,
+          "cwv_pass": false,
+          "lcp_ms": 1712,
+          "inp_ms": 68,
+          "cls": 0.12,
+          "fcp_ms": 1370,
+          "ttfb_ms": 962
+        }
+      }
+    },
+    {
+      "name": "Maison Margiela",
+      "category": "Maison",
+      "origin": "https://www.maisonmargiela.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 92.5,
+        "score_1_10": 9.2,
+        "phone": {
+          "score": 92.1,
+          "cwv_pass": false,
+          "lcp_ms": 2616,
+          "inp_ms": 169,
+          "cls": 0.02,
+          "fcp_ms": 1810,
+          "ttfb_ms": 1112
+        },
+        "desktop": {
+          "score": 93.2,
+          "cwv_pass": true,
+          "lcp_ms": 2090,
+          "inp_ms": 78,
+          "cls": 0.08,
+          "fcp_ms": 1422,
+          "ttfb_ms": 997
+        }
+      }
+    },
+    {
+      "name": "Bottega Veneta",
+      "category": "Maison",
+      "origin": "https://www.bottegaveneta.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 90.4,
+        "score_1_10": 9.0,
+        "phone": {
+          "score": 88.2,
+          "cwv_pass": false,
+          "lcp_ms": 2632,
+          "inp_ms": 237,
+          "cls": 0.07,
+          "fcp_ms": 1925,
+          "ttfb_ms": 394
+        },
+        "desktop": {
+          "score": 94.5,
+          "cwv_pass": true,
+          "lcp_ms": 2069,
+          "inp_ms": 103,
+          "cls": 0.03,
+          "fcp_ms": 1506,
+          "ttfb_ms": 225
+        }
+      }
+    },
+    {
+      "name": "Balenciaga",
+      "category": "Maison",
+      "origin": "https://www.balenciaga.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 90.3,
+        "score_1_10": 9.0,
+        "phone": {
+          "score": 88.4,
+          "cwv_pass": false,
+          "lcp_ms": 2767,
+          "inp_ms": 228,
+          "cls": 0.04,
+          "fcp_ms": 2319,
+          "ttfb_ms": 484
+        },
+        "desktop": {
+          "score": 93.9,
+          "cwv_pass": true,
+          "lcp_ms": 2362,
+          "inp_ms": 95,
+          "cls": 0.04,
+          "fcp_ms": 2029,
+          "ttfb_ms": 235
+        }
+      }
+    },
+    {
+      "name": "Herm\u00e8s",
+      "category": "Maison",
+      "origin": "https://www.hermes.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 88.4,
+        "score_1_10": 8.8,
+        "phone": {
+          "score": 92.2,
+          "cwv_pass": true,
+          "lcp_ms": 1705,
+          "inp_ms": 190,
+          "cls": 0.07,
+          "fcp_ms": 1081,
+          "ttfb_ms": 659
+        },
+        "desktop": {
+          "score": 81.2,
+          "cwv_pass": false,
+          "lcp_ms": 1313,
+          "inp_ms": 77,
+          "cls": 0.24,
+          "fcp_ms": 754,
+          "ttfb_ms": 519
+        }
+      }
+    },
+    {
+      "name": "Ralph Lauren",
+      "category": "Maison",
+      "origin": "https://www.ralphlauren.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 87.9,
+        "score_1_10": 8.8,
+        "phone": {
+          "score": 85.4,
+          "cwv_pass": false,
+          "lcp_ms": 2649,
+          "inp_ms": 289,
+          "cls": 0.08,
+          "fcp_ms": 2398,
+          "ttfb_ms": 444
+        },
+        "desktop": {
+          "score": 92.6,
+          "cwv_pass": true,
+          "lcp_ms": 2140,
+          "inp_ms": 190,
+          "cls": 0.04,
+          "fcp_ms": 1877,
+          "ttfb_ms": 236
+        }
+      }
+    },
+    {
+      "name": "Stella McCartney",
+      "category": "Maison",
+      "origin": "https://www.stellamccartney.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 87.4,
+        "score_1_10": 8.7,
+        "phone": {
+          "score": 86.5,
+          "cwv_pass": false,
+          "lcp_ms": 3338,
+          "inp_ms": 163,
+          "cls": 0.0,
+          "fcp_ms": 2982,
+          "ttfb_ms": 2525
+        },
+        "desktop": {
+          "score": 89.1,
+          "cwv_pass": false,
+          "lcp_ms": 3211,
+          "inp_ms": 72,
+          "cls": 0.0,
+          "fcp_ms": 2892,
+          "ttfb_ms": 2579
+        }
+      }
+    },
+    {
+      "name": "Gucci",
+      "category": "Maison",
+      "origin": "https://www.gucci.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 87.3,
+        "score_1_10": 8.7,
+        "phone": {
+          "score": 84.5,
+          "cwv_pass": false,
+          "lcp_ms": 2103,
+          "inp_ms": 403,
+          "cls": 0.01,
+          "fcp_ms": 1426,
+          "ttfb_ms": 811
+        },
+        "desktop": {
+          "score": 92.4,
+          "cwv_pass": false,
+          "lcp_ms": 1864,
+          "inp_ms": 225,
+          "cls": 0.02,
+          "fcp_ms": 1073,
+          "ttfb_ms": 625
+        }
+      }
+    },
+    {
+      "name": "The Row",
+      "category": "Maison",
+      "origin": "https://www.therow.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 87.2,
+        "score_1_10": 8.7,
+        "phone": {
+          "score": 81.8,
+          "cwv_pass": false,
+          "lcp_ms": 1684,
+          "inp_ms": 485,
+          "cls": 0.0,
+          "fcp_ms": 1365,
+          "ttfb_ms": 606
+        },
+        "desktop": {
+          "score": 97.2,
+          "cwv_pass": true,
+          "lcp_ms": 1318,
+          "inp_ms": 59,
+          "cls": 0.0,
+          "fcp_ms": 1206,
+          "ttfb_ms": 611
         }
       }
     },
@@ -101,25 +437,25 @@
       "origin": "https://www.givenchy.com",
       "field_data": true,
       "performance": {
-        "score_0_100": 86.9,
+        "score_0_100": 87.0,
         "score_1_10": 8.7,
         "phone": {
-          "score": 83.9,
+          "score": 84.0,
           "cwv_pass": false,
-          "lcp_ms": 3466,
+          "lcp_ms": 3456,
           "inp_ms": 211,
           "cls": 0.01,
-          "fcp_ms": 2711,
-          "ttfb_ms": 2225
+          "fcp_ms": 2712,
+          "ttfb_ms": 2224
         },
         "desktop": {
-          "score": 92.4,
+          "score": 92.6,
           "cwv_pass": false,
-          "lcp_ms": 2736,
+          "lcp_ms": 2719,
           "inp_ms": 108,
           "cls": 0.01,
-          "fcp_ms": 2382,
-          "ttfb_ms": 1990
+          "fcp_ms": 2370,
+          "ttfb_ms": 1979
         }
       }
     },
@@ -134,20 +470,48 @@
         "phone": {
           "score": 91.2,
           "cwv_pass": true,
-          "lcp_ms": 1616,
+          "lcp_ms": 1620,
           "inp_ms": 196,
           "cls": 0.1,
-          "fcp_ms": 1287,
-          "ttfb_ms": 843
+          "fcp_ms": 1290,
+          "ttfb_ms": 844
         },
         "desktop": {
-          "score": 76.1,
+          "score": 76.0,
           "cwv_pass": false,
-          "lcp_ms": 1284,
+          "lcp_ms": 1289,
           "inp_ms": 134,
           "cls": 0.3,
-          "fcp_ms": 884,
-          "ttfb_ms": 631
+          "fcp_ms": 887,
+          "ttfb_ms": 633
+        }
+      }
+    },
+    {
+      "name": "Ferragamo",
+      "category": "Maison",
+      "origin": "https://www.ferragamo.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 84.0,
+        "score_1_10": 8.4,
+        "phone": {
+          "score": 80.5,
+          "cwv_pass": false,
+          "lcp_ms": 3164,
+          "inp_ms": 326,
+          "cls": 0.04,
+          "fcp_ms": 2084,
+          "ttfb_ms": 1516
+        },
+        "desktop": {
+          "score": 90.5,
+          "cwv_pass": false,
+          "lcp_ms": 2740,
+          "inp_ms": 164,
+          "cls": 0.04,
+          "fcp_ms": 1568,
+          "ttfb_ms": 1217
         }
       }
     },
@@ -157,16 +521,16 @@
       "origin": "https://www.celine.com",
       "field_data": true,
       "performance": {
-        "score_0_100": 82.2,
+        "score_0_100": 82.1,
         "score_1_10": 8.2,
         "phone": {
-          "score": 76.1,
+          "score": 76.0,
           "cwv_pass": false,
-          "lcp_ms": 2632,
-          "inp_ms": 503,
+          "lcp_ms": 2636,
+          "inp_ms": 504,
           "cls": 0.08,
-          "fcp_ms": 1824,
-          "ttfb_ms": 1332
+          "fcp_ms": 1830,
+          "ttfb_ms": 1335
         },
         "desktop": {
           "score": 93.4,
@@ -177,6 +541,438 @@
           "fcp_ms": 1394,
           "ttfb_ms": 1077
         }
+      }
+    },
+    {
+      "name": "Dior",
+      "category": "Maison",
+      "origin": "https://www.dior.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 81.2,
+        "score_1_10": 8.1,
+        "phone": {
+          "score": 76.1,
+          "cwv_pass": false,
+          "lcp_ms": 2339,
+          "inp_ms": 603,
+          "cls": 0.02,
+          "fcp_ms": 2015,
+          "ttfb_ms": 804
+        },
+        "desktop": {
+          "score": 90.8,
+          "cwv_pass": false,
+          "lcp_ms": 1743,
+          "inp_ms": 256,
+          "cls": 0.03,
+          "fcp_ms": 1419,
+          "ttfb_ms": 741
+        }
+      }
+    },
+    {
+      "name": "Valentino",
+      "category": "Maison",
+      "origin": "https://www.valentino.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 80.7,
+        "score_1_10": 8.1,
+        "phone": {
+          "score": 79.0,
+          "cwv_pass": false,
+          "lcp_ms": 2752,
+          "inp_ms": 472,
+          "cls": 0.0,
+          "fcp_ms": 2299,
+          "ttfb_ms": 1377
+        },
+        "desktop": {
+          "score": 83.8,
+          "cwv_pass": false,
+          "lcp_ms": 3029,
+          "inp_ms": 242,
+          "cls": 0.09,
+          "fcp_ms": 2411,
+          "ttfb_ms": 2148
+        }
+      }
+    },
+    {
+      "name": "Marc Jacobs",
+      "category": "Maison",
+      "origin": "https://www.marcjacobs.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 80.2,
+        "score_1_10": 8.0,
+        "phone": {
+          "score": 72.2,
+          "cwv_pass": false,
+          "lcp_ms": 1592,
+          "inp_ms": 536,
+          "cls": 0.15,
+          "fcp_ms": 1298,
+          "ttfb_ms": 837
+        },
+        "desktop": {
+          "score": 95.1,
+          "cwv_pass": true,
+          "lcp_ms": 1493,
+          "inp_ms": 95,
+          "cls": 0.04,
+          "fcp_ms": 1158,
+          "ttfb_ms": 795
+        }
+      }
+    },
+    {
+      "name": "Ala\u00efa",
+      "category": "Maison",
+      "origin": "https://www.maison-alaia.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 79.2,
+        "score_1_10": 7.9,
+        "phone": {
+          "score": 81.1,
+          "cwv_pass": false,
+          "lcp_ms": 3783,
+          "inp_ms": 219,
+          "cls": 0.0,
+          "fcp_ms": 2906,
+          "ttfb_ms": 2306
+        },
+        "desktop": {
+          "score": 75.8,
+          "cwv_pass": false,
+          "lcp_ms": 2696,
+          "inp_ms": 111,
+          "cls": 0.26,
+          "fcp_ms": 2062,
+          "ttfb_ms": 1545
+        }
+      }
+    },
+    {
+      "name": "Armani",
+      "category": "Maison",
+      "origin": "https://www.armani.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 76.6,
+        "score_1_10": 7.7,
+        "phone": {
+          "score": 76.6,
+          "cwv_pass": false,
+          "lcp_ms": 2602,
+          "inp_ms": 505,
+          "cls": 0.07,
+          "fcp_ms": 2136,
+          "ttfb_ms": 1672
+        },
+        "desktop": {
+          "score": 76.5,
+          "cwv_pass": false,
+          "lcp_ms": 2107,
+          "inp_ms": 336,
+          "cls": 0.19,
+          "fcp_ms": 1658,
+          "ttfb_ms": 1375
+        }
+      }
+    },
+    {
+      "name": "Saint Laurent",
+      "category": "Maison",
+      "origin": "https://www.ysl.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 73.1,
+        "score_1_10": 7.3,
+        "phone": {
+          "score": 68.6,
+          "cwv_pass": false,
+          "lcp_ms": 4321,
+          "inp_ms": 329,
+          "cls": 0.09,
+          "fcp_ms": 3929,
+          "ttfb_ms": 796
+        },
+        "desktop": {
+          "score": 81.4,
+          "cwv_pass": false,
+          "lcp_ms": 2658,
+          "inp_ms": 150,
+          "cls": 0.19,
+          "fcp_ms": 2209,
+          "ttfb_ms": 320
+        }
+      }
+    },
+    {
+      "name": "Cartier",
+      "category": "Maison",
+      "origin": "https://www.cartier.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 72.8,
+        "score_1_10": 7.3,
+        "phone": {
+          "score": 72.2,
+          "cwv_pass": false,
+          "lcp_ms": 3031,
+          "inp_ms": 394,
+          "cls": 0.15,
+          "fcp_ms": 1857,
+          "ttfb_ms": 1398
+        },
+        "desktop": {
+          "score": 74.0,
+          "cwv_pass": false,
+          "lcp_ms": 2270,
+          "inp_ms": 177,
+          "cls": 0.3,
+          "fcp_ms": 1429,
+          "ttfb_ms": 1095
+        }
+      }
+    },
+    {
+      "name": "Chlo\u00e9",
+      "category": "Maison",
+      "origin": "https://www.chloe.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 71.9,
+        "score_1_10": 7.2,
+        "phone": {
+          "score": 62.7,
+          "cwv_pass": false,
+          "lcp_ms": 3249,
+          "inp_ms": 289,
+          "cls": 0.3,
+          "fcp_ms": 1738,
+          "ttfb_ms": 1120
+        },
+        "desktop": {
+          "score": 89.0,
+          "cwv_pass": false,
+          "lcp_ms": 2831,
+          "inp_ms": 142,
+          "cls": 0.07,
+          "fcp_ms": 1524,
+          "ttfb_ms": 1006
+        }
+      }
+    },
+    {
+      "name": "Versace",
+      "category": "Maison",
+      "origin": "https://www.versace.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 71.1,
+        "score_1_10": 7.1,
+        "phone": {
+          "score": 67.9,
+          "cwv_pass": false,
+          "lcp_ms": 3805,
+          "inp_ms": 376,
+          "cls": 0.13,
+          "fcp_ms": 2947,
+          "ttfb_ms": 2197
+        },
+        "desktop": {
+          "score": 77.0,
+          "cwv_pass": false,
+          "lcp_ms": 3312,
+          "inp_ms": 170,
+          "cls": 0.17,
+          "fcp_ms": 2773,
+          "ttfb_ms": 2359
+        }
+      }
+    },
+    {
+      "name": "Miu Miu",
+      "category": "Maison",
+      "origin": "https://www.miumiu.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 66.2,
+        "score_1_10": 6.6,
+        "phone": {
+          "score": 63.8,
+          "cwv_pass": false,
+          "lcp_ms": 5058,
+          "inp_ms": 351,
+          "cls": 0.02,
+          "fcp_ms": 2959,
+          "ttfb_ms": 1075
+        },
+        "desktop": {
+          "score": 70.7,
+          "cwv_pass": false,
+          "lcp_ms": 3281,
+          "inp_ms": 145,
+          "cls": 0.25,
+          "fcp_ms": 2150,
+          "ttfb_ms": 868
+        }
+      }
+    },
+    {
+      "name": "Fendi",
+      "category": "Maison",
+      "origin": "https://www.fendi.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 61.5,
+        "score_1_10": 6.2,
+        "phone": {
+          "score": 57.7,
+          "cwv_pass": false,
+          "lcp_ms": 8108,
+          "inp_ms": 320,
+          "cls": 0.01,
+          "fcp_ms": 3249,
+          "ttfb_ms": 2501
+        },
+        "desktop": {
+          "score": 68.5,
+          "cwv_pass": false,
+          "lcp_ms": 5281,
+          "inp_ms": 152,
+          "cls": 0.05,
+          "fcp_ms": 2298,
+          "ttfb_ms": 1860
+        }
+      }
+    },
+    {
+      "name": "Loewe",
+      "category": "Maison",
+      "origin": "https://www.loewe.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 60.1,
+        "score_1_10": 6.0,
+        "phone": {
+          "score": 63.3,
+          "cwv_pass": false,
+          "lcp_ms": 3555,
+          "inp_ms": 410,
+          "cls": 0.19,
+          "fcp_ms": 2892,
+          "ttfb_ms": 2414
+        },
+        "desktop": {
+          "score": 54.2,
+          "cwv_pass": false,
+          "lcp_ms": 3090,
+          "inp_ms": 213,
+          "cls": 0.5,
+          "fcp_ms": 2268,
+          "ttfb_ms": 2048
+        }
+      }
+    },
+    {
+      "name": "Alexander McQueen",
+      "category": "Maison",
+      "origin": "https://www.alexandermcqueen.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 58.1,
+        "score_1_10": 5.8,
+        "phone": {
+          "score": 45.3,
+          "cwv_pass": false,
+          "lcp_ms": 6096,
+          "inp_ms": 310,
+          "cls": 0.21,
+          "fcp_ms": 5679,
+          "ttfb_ms": 1103
+        },
+        "desktop": {
+          "score": 81.9,
+          "cwv_pass": false,
+          "lcp_ms": 3490,
+          "inp_ms": 159,
+          "cls": 0.1,
+          "fcp_ms": 2973,
+          "ttfb_ms": 609
+        }
+      }
+    },
+    {
+      "name": "Prada",
+      "category": "Maison",
+      "origin": "https://www.prada.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 51.9,
+        "score_1_10": 5.2,
+        "phone": {
+          "score": 48.6,
+          "cwv_pass": false,
+          "lcp_ms": 4414,
+          "inp_ms": 545,
+          "cls": 0.21,
+          "fcp_ms": 2641,
+          "ttfb_ms": 1153
+        },
+        "desktop": {
+          "score": 57.9,
+          "cwv_pass": false,
+          "lcp_ms": 3302,
+          "inp_ms": 252,
+          "cls": 0.39,
+          "fcp_ms": 1812,
+          "ttfb_ms": 966
+        }
+      }
+    },
+    {
+      "name": "Jean Paul Gaultier",
+      "category": "Maison",
+      "origin": "https://www.jeanpaulgaultier.com",
+      "field_data": true,
+      "performance": {
+        "score_0_100": 37.7,
+        "score_1_10": 3.8,
+        "phone": {
+          "score": 33.9,
+          "cwv_pass": false,
+          "lcp_ms": 5268,
+          "inp_ms": 250,
+          "cls": 1.28,
+          "fcp_ms": 4561,
+          "ttfb_ms": 1529
+        },
+        "desktop": {
+          "score": 44.7,
+          "cwv_pass": false,
+          "lcp_ms": 4353,
+          "inp_ms": 142,
+          "cls": 1.38,
+          "fcp_ms": 3330,
+          "ttfb_ms": 1216
+        }
+      }
+    },
+    {
+      "name": "Balmain",
+      "category": "Maison",
+      "origin": "https://www.balmain.com",
+      "field_data": false,
+      "performance": {
+        "score_0_100": null,
+        "score_1_10": null,
+        "phone": null,
+        "desktop": null
       }
     }
   ]

@@ -1,10 +1,171 @@
 {
   "mobile_weight": 0.65,
-  "_comment": "CrUX is origin-exact. Before the first real run, paste each origin into a browser and copy whatever stays in the address bar AFTER redirects — that is the origin CrUX has data for. Louis Vuitton especially splits traffic across regional subdomains (us., fr., www.), so verify which one your audience uses. Scheme + host only, no path.",
+  "_comment": "CrUX is origin-exact (scheme + host, no path). Most below are the canonical www origin. A handful use regional subdomains or multiple storefronts and may come back NR on the first run — see the notes at the bottom. Fix any NR by swapping in the origin that survives redirects in a browser.",
   "brands": [
-    { "name": "Louis Vuitton", "category": "Maison", "origin": "https://us.louisvuitton.com" },
-    { "name": "Celine",        "category": "Maison", "origin": "https://www.celine.com" },
-    { "name": "Givenchy",      "category": "Maison", "origin": "https://www.givenchy.com" },
-    { "name": "Acne Studios",  "category": "Maison", "origin": "https://www.acnestudios.com" }
+    {
+      "name": "Celine",
+      "category": "Maison",
+      "origin": "https://www.celine.com"
+    },
+    {
+      "name": "Hermès",
+      "category": "Maison",
+      "origin": "https://www.hermes.com"
+    },
+    {
+      "name": "Alaïa",
+      "category": "Maison",
+      "origin": "https://www.maison-alaia.com"
+    },
+    {
+      "name": "Prada",
+      "category": "Maison",
+      "origin": "https://www.prada.com"
+    },
+    {
+      "name": "Miu Miu",
+      "category": "Maison",
+      "origin": "https://www.miumiu.com"
+    },
+    {
+      "name": "Dior",
+      "category": "Maison",
+      "origin": "https://www.dior.com"
+    },
+    {
+      "name": "Saint Laurent",
+      "category": "Maison",
+      "origin": "https://www.ysl.com"
+    },
+    {
+      "name": "Bottega Veneta",
+      "category": "Maison",
+      "origin": "https://www.bottegaveneta.com"
+    },
+    {
+      "name": "Gucci",
+      "category": "Maison",
+      "origin": "https://www.gucci.com"
+    },
+    {
+      "name": "Fendi",
+      "category": "Maison",
+      "origin": "https://www.fendi.com"
+    },
+    {
+      "name": "Marc Jacobs",
+      "category": "Maison",
+      "origin": "https://www.marcjacobs.com"
+    },
+    {
+      "name": "Balenciaga",
+      "category": "Maison",
+      "origin": "https://www.balenciaga.com"
+    },
+    {
+      "name": "Burberry",
+      "category": "Maison",
+      "origin": "https://www.burberry.com"
+    },
+    {
+      "name": "Ralph Lauren",
+      "category": "Maison",
+      "origin": "https://www.ralphlauren.com"
+    },
+    {
+      "name": "Valentino",
+      "category": "Maison",
+      "origin": "https://www.valentino.com"
+    },
+    {
+      "name": "Versace",
+      "category": "Maison",
+      "origin": "https://www.versace.com"
+    },
+    {
+      "name": "Alexander McQueen",
+      "category": "Maison",
+      "origin": "https://www.alexandermcqueen.com"
+    },
+    {
+      "name": "Stella McCartney",
+      "category": "Maison",
+      "origin": "https://www.stellamccartney.com"
+    },
+    {
+      "name": "Loewe",
+      "category": "Maison",
+      "origin": "https://www.loewe.com"
+    },
+    {
+      "name": "The Row",
+      "category": "Maison",
+      "origin": "https://www.therow.com"
+    },
+    {
+      "name": "Chloé",
+      "category": "Maison",
+      "origin": "https://www.chloe.com"
+    },
+    {
+      "name": "Ferragamo",
+      "category": "Maison",
+      "origin": "https://www.ferragamo.com"
+    },
+    {
+      "name": "Rick Owens",
+      "category": "Maison",
+      "origin": "https://www.rickowens.eu"
+    },
+    {
+      "name": "Armani",
+      "category": "Maison",
+      "origin": "https://www.armani.com"
+    },
+    {
+      "name": "Maison Margiela",
+      "category": "Maison",
+      "origin": "https://www.maisonmargiela.com"
+    },
+    {
+      "name": "Balmain",
+      "category": "Maison",
+      "origin": "https://www.balmain.com"
+    },
+    {
+      "name": "Kenzo",
+      "category": "Maison",
+      "origin": "https://www.kenzo.com"
+    },
+    {
+      "name": "Jean Paul Gaultier",
+      "category": "Maison",
+      "origin": "https://www.jeanpaulgaultier.com"
+    },
+    {
+      "name": "Jacquemus",
+      "category": "Maison",
+      "origin": "https://www.jacquemus.com"
+    },
+    {
+      "name": "Cartier",
+      "category": "Maison",
+      "origin": "https://www.cartier.com"
+    },
+    {
+      "name": "Louis Vuitton",
+      "category": "Maison",
+      "origin": "https://us.louisvuitton.com"
+    },
+    {
+      "name": "Givenchy",
+      "category": "Maison",
+      "origin": "https://www.givenchy.com"
+    },
+    {
+      "name": "Acne Studios",
+      "category": "Maison",
+      "origin": "https://www.acnestudios.com"
+    }
   ]
 }

@@ -18,11 +18,18 @@
   th{font-weight:bold;}
   .num{text-align:right;}
   .grade{font-weight:bold; font-size:19px;}
-  .meet{color:#008000;}
-  .miss{color:#cc0000;}
+  .meet{color:#008000;} .miss{color:#cc0000;}
   .small{font-size:13px;}
   .tablewrap{overflow-x:auto;}
   hr{border:0; border-top:1px solid #000000; margin:18px 0;}
+  .views{margin:10px 0;}
+  .views button{
+    font-family:"Times New Roman",Times,serif; font-size:15px;
+    background:#ffffff; border:1px solid #000000; padding:4px 12px; margin-right:6px; cursor:pointer;
+  }
+  .views button.on{background:#000000; color:#ffffff; font-weight:bold;}
+  .sub{font-variant-numeric:tabular-nums;}
+  .muted{color:#555555;}
 </style>
 </head>
 <body>
@@ -31,30 +38,20 @@
 <p>Luxury and premium-tech brands, rated on performance, design, and agentic readiness &middot; 2026 edition</p>
 <p id="asof"></p>
 
+<div class="views" id="views">
+  <button data-view="performance">Performance</button>
+  <button data-view="agentic">Agentic</button>
+  <button data-view="mixed">Mixed</button>
+</div>
+
 <hr />
 
 <div class="tablewrap">
-  <table id="board" hidden>
-    <thead>
-      <tr>
-        <th>Rank</th>
-        <th>Maison</th>
-        <th>Category</th>
-        <th>Mobile (LCP / INP / CLS)</th>
-        <th>Desktop (LCP / INP / CLS)</th>
-        <th>Trend</th>
-        <th>Grade</th>
-        <th class="num">Score</th>
-      </tr>
-    </thead>
-    <tbody id="rows"></tbody>
-  </table>
+  <table id="board" hidden><thead id="head"></thead><tbody id="rows"></tbody></table>
 </div>
-
 <div id="message"></div>
 
 <hr />
-
 <p class="small" id="legend" hidden></p>
 <p class="small" id="footer" hidden></p>
 
@@ -63,113 +60,193 @@
 
 const GRADES = [[90,"AAA"],[85,"AA"],[80,"A"],[75,"BBB"],[70,"BB"],[65,"B"],[60,"CCC"],[0,"CC"]];
 function gradeFor(s){ if(s==null) return "NR"; for(const [f,g] of GRADES) if(s>=f) return g; return "CC"; }
+function esc(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+function fmtDate(iso){ const d=new Date(iso); return isNaN(d)?(iso||""):d.toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"}); }
+
+let MODEL = [];      // merged brand rows
+let VIEW = "mixed";  // default
+let META = {perf:null, ag:null};
 
 async function boot(){
-  let latest;
-  try{
-    latest = await (await fetch("./results/latest.json",{cache:"no-store"})).json();
-  }catch(e){
-    return showMessage(
-      'Cannot read <code>results/latest.json</code>. If you are previewing on your machine, run '+
-      '<code>python -m http.server</code> in this folder and open the localhost address; browsers '+
-      'block file reads over file://. On GitHub Pages it loads on its own.'
-    );
+  let perf;
+  try{ perf = await (await fetch("./results/latest.json",{cache:"no-store"})).json(); }
+  catch(e){
+    return showMessage('Cannot read <code>results/latest.json</code>. Preview with '+
+      '<code>python -m http.server</code> and open the localhost address; on GitHub Pages it loads on its own.');
   }
+  let ag = null;
+  try{ ag = await (await fetch("./results/agentic.json",{cache:"no-store"})).json(); }
+  catch(e){ /* agentic optional until that workflow has run */ }
+
   let history = {};
   try{ history = parseHistory(await (await fetch("./results/history.csv",{cache:"no-store"})).text()); }
   catch(e){ /* trend optional */ }
-  render(latest, history);
+
+  META.perf = perf; META.ag = ag;
+  MODEL = merge(perf, ag, history);
+  wireViews();
+  setView(VIEW);
+
+  const bits = ["Performance as of <b>"+fmtDate(perf.generated_at)+"</b>"];
+  if(ag && ag.generated_at) bits.push("agentic as of <b>"+fmtDate(ag.generated_at)+"</b>");
+  document.getElementById("asof").innerHTML = bits.join(", ")+". Updated monthly.";
 }
 
 function parseHistory(csv){
-  const lines = csv.trim().split(/\r?\n/);
-  if(lines.length < 2) return {};
-  const head = lines[0].split(",");
-  const bi = head.indexOf("brand"), di = head.indexOf("date"), si = head.indexOf("score_0_100");
-  const out = {};
-  for(let i=1;i<lines.length;i++){
-    const c = lines[i].split(",");
-    const b=c[bi], d=c[di], s=parseFloat(c[si]);
-    if(!b || isNaN(s)) continue;
-    (out[b]=out[b]||[]).push({date:d, score:s});
-  }
+  const lines = csv.trim().split(/\r?\n/); if(lines.length<2) return {};
+  const h = lines[0].split(","), bi=h.indexOf("brand"), di=h.indexOf("date"), si=h.indexOf("score_0_100");
+  const out={};
+  for(let i=1;i<lines.length;i++){ const c=lines[i].split(","); const b=c[bi],s=parseFloat(c[si]);
+    if(!b||isNaN(s)) continue; (out[b]=out[b]||[]).push({date:c[di],score:s}); }
   for(const b in out) out[b].sort((x,y)=> x.date<y.date?-1:1);
   return out;
 }
 
-function trendText(scores){
-  if(!scores || scores.length < 2) return "building";
-  const d = scores[scores.length-1] - scores[0];
-  const wks = scores.length;
-  if(Math.abs(d) < 0.5) return "steady (" + wks + " wks)";
-  return (d>0 ? "up " : "down ") + Math.abs(d).toFixed(1) + " (" + wks + " wks)";
+function avg(nums){ const v=nums.filter(n=>n!=null); return v.length? v.reduce((a,b)=>a+b,0)/v.length : null; }
+
+function merge(perf, ag, history){
+  const byName = {};
+  (perf.brands||[]).forEach(b=>{
+    byName[b.name] = {name:b.name, category:b.category, origin:b.origin,
+      perf:b.performance, perfScore:b.performance? b.performance.score_0_100 : null,
+      ag:null, agScore:null, hist:(history[b.name]||[]).map(r=>r.score)};
+  });
+  if(ag) (ag.brands||[]).forEach(b=>{
+    const row = byName[b.name] || (byName[b.name]={name:b.name, category:b.category, origin:b.origin,
+      perf:null, perfScore:null, hist:[]});
+    row.ag = b; row.agScore = b.agentic? b.agentic.score_0_100 : null;
+    if(!row.origin) row.origin = b.origin;
+  });
+  const rows = Object.values(byName);
+  rows.forEach(r=>{ const mv=avg([r.perfScore, r.agScore]); r.mixedScore = mv==null?null:Math.round(mv*10)/10; });
+  return rows;
 }
 
-function vitals(ff){
-  if(!ff) return "no data";
-  const parts = [];
-  parts.push(ff.lcp_ms!=null ? (ff.lcp_ms/1000).toFixed(1)+"s" : "\u2014");
-  parts.push(ff.inp_ms!=null ? ff.inp_ms+"ms" : "\u2014");
-  parts.push(ff.cls!=null ? ff.cls : "\u2014");
-  let verdict = "";
-  if(ff.cwv_pass===true)  verdict = ' <span class="meet">(meets targets)</span>';
-  if(ff.cwv_pass===false) verdict = ' <span class="miss">(below targets)</span>';
-  return parts.join(" / ") + verdict;
+function wireViews(){
+  document.querySelectorAll("#views button").forEach(btn=>{
+    btn.addEventListener("click", ()=> setView(btn.dataset.view));
+  });
 }
 
-function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
-
-function fmtDate(iso){
-  const d = new Date(iso);
-  if(isNaN(d)) return iso || "an earlier reading";
-  return d.toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"});
+function scoreFor(r, view){
+  if(view==="performance") return r.perfScore;
+  if(view==="agentic") return r.agScore;
+  return r.mixedScore;
 }
 
-function render(latest, history){
-  const brands = (latest.brands||[]).slice()
-    .sort((a,b)=> (b.performance.score_0_100||-1)-(a.performance.score_0_100||-1));
+function setView(view){
+  VIEW = view;
+  document.querySelectorAll("#views button").forEach(b=> b.classList.toggle("on", b.dataset.view===view));
 
-  document.getElementById("rows").innerHTML = brands.map((b,i)=>{
-    const p = b.performance;
-    const score = p.score_0_100;
-    const scores = (history[b.name]||[]).map(r=>r.score);
-    const name = b.origin
-      ? '<a href="'+esc(b.origin)+'" target="_blank" rel="noopener">'+esc(b.name)+'</a>'
-      : esc(b.name);
-    const scoreCell = score!=null ? score + '<br><span class="small">'+p.score_1_10+' / 10</span>' : "\u2014";
-    return "<tr>"+
-      '<td class="num">'+(i+1)+"</td>"+
-      "<td>"+name+"</td>"+
-      "<td>"+esc(b.category||"")+"</td>"+
-      "<td>"+vitals(p.phone)+"</td>"+
-      "<td>"+vitals(p.desktop)+"</td>"+
-      "<td>"+trendText(scores)+"</td>"+
-      '<td class="grade">'+gradeFor(score)+"</td>"+
-      '<td class="num">'+scoreCell+"</td>"+
-    "</tr>";
-  }).join("");
+  const list = MODEL.slice().sort((a,b)=> (scoreFor(b,view)??-1)-(scoreFor(a,view)??-1));
+  const build = view==="performance" ? renderPerformance : view==="agentic" ? renderAgentic : renderMixed;
+  const {head, rows, note} = build(list);
 
+  document.getElementById("head").innerHTML = head;
+  document.getElementById("rows").innerHTML = rows;
   document.getElementById("board").hidden = false;
-  document.getElementById("asof").innerHTML =
-    "As of " + fmtDate(latest.generated_at) + ". Updated on the first of each month.";
+  document.getElementById("message").innerHTML = note || "";
+  setLegend(view);
+}
 
-  const legend = document.getElementById("legend");
-  legend.hidden = false;
-  legend.innerHTML =
-    "Grades: AAA / AA / A strong, BBB / BB middling, B / CCC / CC poor, NR not rated (too little "+
-    "traffic for reliable data). A maison meets targets only when LCP, INP and CLS are all within "+
-    "Google's good range.";
+/* ---------- Performance view ---------- */
+function vitals(ff){
+  if(!ff) return '<span class="muted">no data</span>';
+  const p=[]; p.push(ff.lcp_ms!=null?(ff.lcp_ms/1000).toFixed(1)+"s":"\u2014");
+  p.push(ff.inp_ms!=null?ff.inp_ms+"ms":"\u2014"); p.push(ff.cls!=null?ff.cls:"\u2014");
+  let v=""; if(ff.cwv_pass===true) v=' <span class="meet">(meets)</span>'; if(ff.cwv_pass===false) v=' <span class="miss">(below)</span>';
+  return p.join(" / ")+v;
+}
+function trendText(sc){ if(!sc||sc.length<2) return "\u2014"; const d=sc[sc.length-1]-sc[0];
+  if(Math.abs(d)<0.5) return "steady"; return (d>0?"up ":"down ")+Math.abs(d).toFixed(1); }
 
-  const foot = document.getElementById("footer");
-  foot.hidden = false;
-  foot.textContent =
-    "Source: Google Chrome UX Report, 75th percentile of real Chrome visits over a rolling 28-day "+
-    "window, blended 65% mobile / 35% desktop. Field data covers the whole site, not a single page.";
+function renderPerformance(list){
+  const head='<tr><th>#</th><th>Brand</th><th>Mobile (LCP/INP/CLS)</th><th>Desktop</th>'+
+             '<th>Trend</th><th>Grade</th><th class="num">Score</th></tr>';
+  const rows = list.map((r,i)=>{
+    const p=r.perf, s=r.perfScore;
+    return "<tr><td class='num'>"+(i+1)+"</td>"+brandCell(r)+
+      "<td>"+vitals(p&&p.phone)+"</td><td>"+vitals(p&&p.desktop)+"</td>"+
+      "<td>"+trendText(r.hist)+"</td>"+gradeScore(s)+"</tr>";
+  }).join("");
+  return {head, rows};
+}
+
+/* ---------- Agentic view ---------- */
+function agSignals(ag){
+  if(!ag) return '<span class="muted">not measured</span>';
+  const c=ag.components||{}, man=(ag.detail&&ag.detail.manual)||{};
+  const bits=[];
+  bits.push("schema "+(c.A==null?"\u2014":c.A>=70?"yes":c.A>=40?"partial":"no"));
+  bits.push("access "+(c.C==null?"\u2014":Math.round(c.C)+"%"));
+  bits.push("buy "+(man.purchase||"\u2014"));
+  bits.push("rails "+(man.payment_rails||"\u2014"));
+  return bits.join(" \u00b7 ");
+}
+function renderAgentic(list){
+  if(!META.ag){
+    return {head:"", rows:"", note:'<p>Agentic data isn\u2019t published yet. Add PDP URLs and '+
+      'fill <code>agentic_manual.json</code>, then run the <b>Monthly agentic check</b> workflow.</p>'};
+  }
+  const head='<tr><th>#</th><th>Brand</th><th>Signals</th><th>Coverage</th>'+
+             '<th>Grade</th><th class="num">Score</th></tr>';
+  const rows = list.map((r,i)=>{
+    const s=r.agScore, cov=r.ag&&r.ag.agentic? r.ag.agentic.coverage_pct : null;
+    const covTxt = cov==null? "\u2014" : cov+"%"+(r.ag.agentic.blocked?" (blocked)":"");
+    return "<tr><td class='num'>"+(i+1)+"</td>"+brandCell(r)+
+      "<td>"+agSignals(r.ag)+"</td><td class='small'>"+covTxt+"</td>"+gradeScore(s)+"</tr>";
+  }).join("");
+  return {head, rows};
+}
+
+/* ---------- Mixed view ---------- */
+function subScore(s){ return s==null? '<span class="muted">\u2014</span>' : s+' <span class="small">('+gradeFor(s)+')</span>'; }
+function renderMixed(list){
+  const head='<tr><th>#</th><th>Brand</th><th>Performance</th><th>Agentic</th>'+
+             '<th>Grade</th><th class="num">Mixed</th></tr>';
+  const note = META.ag ? "" :
+    '<p class="muted">Agentic data not published yet \u2014 Mixed currently reflects performance only. '+
+    'It will blend automatically once the agentic workflow has run.</p>';
+  const rows = list.map((r,i)=>{
+    return "<tr><td class='num'>"+(i+1)+"</td>"+brandCell(r)+
+      "<td class='sub'>"+subScore(r.perfScore)+"</td>"+
+      "<td class='sub'>"+subScore(r.agScore)+"</td>"+
+      gradeScore(r.mixedScore)+"</tr>";
+  }).join("");
+  return {head, rows, note};
+}
+
+/* ---------- shared cells ---------- */
+function brandCell(r){
+  const nm = r.origin ? '<a href="'+esc(r.origin)+'" target="_blank" rel="noopener">'+esc(r.name)+'</a>' : esc(r.name);
+  return "<td>"+nm+"<br><span class='small muted'>"+esc(r.category||"")+"</span></td>";
+}
+function gradeScore(s){
+  if(s==null) return '<td class="grade">NR</td><td class="num muted">\u2014</td>';
+  return '<td class="grade">'+gradeFor(s)+'</td><td class="num sub">'+s+
+         '<br><span class="small">'+(Math.round(s)/10).toFixed(1)+' / 10</span></td>';
+}
+
+function setLegend(view){
+  const legend=document.getElementById("legend"), footer=document.getElementById("footer");
+  legend.hidden=false; footer.hidden=false;
+  const grades = "Grades: AAA/AA/A strong, BBB/BB middling, B and below poor, NR not rated.";
+  if(view==="performance"){
+    legend.innerHTML = grades+" \u201CMeets/below\u201D marks whether real-user LCP, INP and CLS are all in Google\u2019s good range.";
+    footer.textContent = "Performance: Google CrUX field data, 75th percentile over 28 days, blended 65% mobile / 35% desktop.";
+  } else if(view==="agentic"){
+    legend.innerHTML = grades+" Signals: schema (product structured data), access (AI-bot/sitemap/llms.txt), buy (can an agent purchase), rails (agentic payment support). Coverage shows how much of the score was measurable.";
+    footer.textContent = "Agentic readiness: automated checks for structured data, readability and agent access, plus manual judgment on checkout, purchase gating and payment rails.";
+  } else {
+    legend.innerHTML = grades+" Mixed is an equal blend of the performance and agentic scores (a brand with only one axis available uses that axis).";
+    footer.textContent = "Mixed view averages the two axes. Design, the third axis, is not yet scored.";
+  }
 }
 
 function showMessage(html){
-  document.getElementById("asof").textContent = "";
-  document.getElementById("message").innerHTML = "<p>"+html+"</p>";
+  document.getElementById("asof").textContent="";
+  document.getElementById("board").hidden=true;
+  document.getElementById("message").innerHTML='<p>'+html+'</p>';
 }
 
 boot();

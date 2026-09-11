@@ -1,0 +1,1418 @@
+{
+  "generated_at": "2026-09-11T07:51:58+00:00",
+  "weights": {
+    "A": 25,
+    "B": 15,
+    "C": 10,
+    "D": 15,
+    "E": 25,
+    "F": 10
+  },
+  "scoring_notes": {
+    "purchase": {
+      "open": 100,
+      "partial": 50,
+      "gated": 15,
+      "none": 0
+    },
+    "guest_checkout": {
+      "yes": 100,
+      "account": 40,
+      "none": 0
+    },
+    "payment_rails": {
+      "live": 100,
+      "announced": 50,
+      "none": 0
+    },
+    "auto": "A=structured data, B=raw-HTML readability, C=agent access"
+  },
+  "brands": [
+    {
+      "name": "Hermès",
+      "origin": "https://www.hermes.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 100.0,
+        "score_1_10": 10.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 100.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": true
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Burberry",
+      "origin": "https://www.burberry.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 100.0,
+        "score_1_10": 10.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 100.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": true
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "The Row",
+      "origin": "https://www.therow.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 100.0,
+        "score_1_10": 10.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 100.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": true
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Rick Owens",
+      "origin": "https://www.rickowens.eu",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 100.0,
+        "score_1_10": 10.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 100.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": true
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Balmain",
+      "origin": "https://www.balmain.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 100.0,
+        "score_1_10": 10.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 100.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": true
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Jean Paul Gaultier",
+      "origin": "https://www.jeanpaulgaultier.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 100.0,
+        "score_1_10": 10.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 100.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": true
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Celine",
+      "origin": "https://www.celine.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 80.0,
+        "score_1_10": 8.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 80.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Alaïa",
+      "origin": "https://www.maison-alaia.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 80.0,
+        "score_1_10": 8.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 80.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Prada",
+      "origin": "https://www.prada.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 80.0,
+        "score_1_10": 8.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 80.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Miu Miu",
+      "origin": "https://www.miumiu.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 80.0,
+        "score_1_10": 8.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 80.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Marc Jacobs",
+      "origin": "https://www.marcjacobs.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 80.0,
+        "score_1_10": 8.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 80.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Ralph Lauren",
+      "origin": "https://www.ralphlauren.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 80.0,
+        "score_1_10": 8.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 80.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Valentino",
+      "origin": "https://www.valentino.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 80.0,
+        "score_1_10": 8.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 80.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Stella McCartney",
+      "origin": "https://www.stellamccartney.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 80.0,
+        "score_1_10": 8.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 80.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Loewe",
+      "origin": "https://www.loewe.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 80.0,
+        "score_1_10": 8.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 80.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Chloé",
+      "origin": "https://www.chloe.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 80.0,
+        "score_1_10": 8.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 80.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Maison Margiela",
+      "origin": "https://www.maisonmargiela.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 80.0,
+        "score_1_10": 8.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 80.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Kenzo",
+      "origin": "https://www.kenzo.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 80.0,
+        "score_1_10": 8.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 80.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Cartier",
+      "origin": "https://www.cartier.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 80.0,
+        "score_1_10": 8.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 80.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Acne Studios",
+      "origin": "https://www.acnestudios.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 73.8,
+        "score_1_10": 7.4,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 73.8,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "blocks bytespider",
+          "ai_score": 87.5,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Armani",
+      "origin": "https://www.armani.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 67.5,
+        "score_1_10": 6.8,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 67.5,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "blocks bytespider, amazonbot",
+          "ai_score": 75.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Dior",
+      "origin": "https://www.dior.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 50.0,
+        "score_1_10": 5.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 50.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": false,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Saint Laurent",
+      "origin": "https://www.ysl.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 50.0,
+        "score_1_10": 5.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 50.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": false,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Bottega Veneta",
+      "origin": "https://www.bottegaveneta.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 50.0,
+        "score_1_10": 5.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 50.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": false,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Gucci",
+      "origin": "https://www.gucci.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 50.0,
+        "score_1_10": 5.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 50.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "no robots.txt (open by default)",
+          "ai_score": 100.0,
+          "sitemap": false,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Fendi",
+      "origin": "https://www.fendi.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 50.0,
+        "score_1_10": 5.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 50.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "no robots.txt (open by default)",
+          "ai_score": 100.0,
+          "sitemap": false,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Balenciaga",
+      "origin": "https://www.balenciaga.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 50.0,
+        "score_1_10": 5.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 50.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": false,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Versace",
+      "origin": "https://www.versace.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 50.0,
+        "score_1_10": 5.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 50.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": false,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Alexander McQueen",
+      "origin": "https://www.alexandermcqueen.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 50.0,
+        "score_1_10": 5.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 50.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": false,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Ferragamo",
+      "origin": "https://www.ferragamo.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 50.0,
+        "score_1_10": 5.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 50.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": false,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Jacquemus",
+      "origin": "https://www.jacquemus.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 50.0,
+        "score_1_10": 5.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 50.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": false,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Louis Vuitton",
+      "origin": "https://us.louisvuitton.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 50.0,
+        "score_1_10": 5.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 50.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": false,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Givenchy",
+      "origin": "https://www.givenchy.com",
+      "pdp": null,
+      "agentic": {
+        "score_0_100": 50.0,
+        "score_1_10": 5.0,
+        "coverage_pct": 10,
+        "blocked": false,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 50.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": false,
+          "llms_txt": false
+        },
+        "pdp": {
+          "note": "no pdp url"
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    }
+  ]
+}

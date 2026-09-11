@@ -1,0 +1,29 @@
+name: Monthly agentic check
+
+on:
+  schedule:
+    # 06:30 UTC on the 1st — just after the performance job.
+    - cron: "30 6 1 * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  agentic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run agentic readiness check
+        run: python check_agentic.py
+      - name: Commit results
+        run: |
+          git config user.name "perf-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add results/
+          git diff --staged --quiet || git commit -m "Monthly agentic update $(date -u +%F)"
+          git push

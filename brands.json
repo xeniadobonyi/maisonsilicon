@@ -1,171 +1,204 @@
 {
   "mobile_weight": 0.65,
-  "_comment": "CrUX is origin-exact (scheme + host, no path). Most below are the canonical www origin. A handful use regional subdomains or multiple storefronts and may come back NR on the first run — see the notes at the bottom. Fix any NR by swapping in the origin that survives redirects in a browser.",
+  "_comment": "CrUX (performance) uses 'origin'. The agentic checker also uses 'pdp' — set each to ONE in-stock product page URL so it can read structured data. Leave pdp empty to skip the structured-data checks for that brand. Origin is scheme+host, no path.",
   "brands": [
     {
       "name": "Celine",
       "category": "Maison",
-      "origin": "https://www.celine.com"
+      "origin": "https://www.celine.com",
+      "pdp": ""
     },
     {
       "name": "Hermès",
       "category": "Maison",
-      "origin": "https://www.hermes.com"
+      "origin": "https://www.hermes.com",
+      "pdp": ""
     },
     {
       "name": "Alaïa",
       "category": "Maison",
-      "origin": "https://www.maison-alaia.com"
+      "origin": "https://www.maison-alaia.com",
+      "pdp": ""
     },
     {
       "name": "Prada",
       "category": "Maison",
-      "origin": "https://www.prada.com"
+      "origin": "https://www.prada.com",
+      "pdp": ""
     },
     {
       "name": "Miu Miu",
       "category": "Maison",
-      "origin": "https://www.miumiu.com"
+      "origin": "https://www.miumiu.com",
+      "pdp": ""
     },
     {
       "name": "Dior",
       "category": "Maison",
-      "origin": "https://www.dior.com"
+      "origin": "https://www.dior.com",
+      "pdp": ""
     },
     {
       "name": "Saint Laurent",
       "category": "Maison",
-      "origin": "https://www.ysl.com"
+      "origin": "https://www.ysl.com",
+      "pdp": ""
     },
     {
       "name": "Bottega Veneta",
       "category": "Maison",
-      "origin": "https://www.bottegaveneta.com"
+      "origin": "https://www.bottegaveneta.com",
+      "pdp": ""
     },
     {
       "name": "Gucci",
       "category": "Maison",
-      "origin": "https://www.gucci.com"
+      "origin": "https://www.gucci.com",
+      "pdp": ""
     },
     {
       "name": "Fendi",
       "category": "Maison",
-      "origin": "https://www.fendi.com"
+      "origin": "https://www.fendi.com",
+      "pdp": ""
     },
     {
       "name": "Marc Jacobs",
       "category": "Maison",
-      "origin": "https://www.marcjacobs.com"
+      "origin": "https://www.marcjacobs.com",
+      "pdp": ""
     },
     {
       "name": "Balenciaga",
       "category": "Maison",
-      "origin": "https://www.balenciaga.com"
+      "origin": "https://www.balenciaga.com",
+      "pdp": ""
     },
     {
       "name": "Burberry",
       "category": "Maison",
-      "origin": "https://www.burberry.com"
+      "origin": "https://www.burberry.com",
+      "pdp": ""
     },
     {
       "name": "Ralph Lauren",
       "category": "Maison",
-      "origin": "https://www.ralphlauren.com"
+      "origin": "https://www.ralphlauren.com",
+      "pdp": ""
     },
     {
       "name": "Valentino",
       "category": "Maison",
-      "origin": "https://www.valentino.com"
+      "origin": "https://www.valentino.com",
+      "pdp": ""
     },
     {
       "name": "Versace",
       "category": "Maison",
-      "origin": "https://www.versace.com"
+      "origin": "https://www.versace.com",
+      "pdp": ""
     },
     {
       "name": "Alexander McQueen",
       "category": "Maison",
-      "origin": "https://www.alexandermcqueen.com"
+      "origin": "https://www.alexandermcqueen.com",
+      "pdp": ""
     },
     {
       "name": "Stella McCartney",
       "category": "Maison",
-      "origin": "https://www.stellamccartney.com"
+      "origin": "https://www.stellamccartney.com",
+      "pdp": ""
     },
     {
       "name": "Loewe",
       "category": "Maison",
-      "origin": "https://www.loewe.com"
+      "origin": "https://www.loewe.com",
+      "pdp": ""
     },
     {
       "name": "The Row",
       "category": "Maison",
-      "origin": "https://www.therow.com"
+      "origin": "https://www.therow.com",
+      "pdp": ""
     },
     {
       "name": "Chloé",
       "category": "Maison",
-      "origin": "https://www.chloe.com"
+      "origin": "https://www.chloe.com",
+      "pdp": ""
     },
     {
       "name": "Ferragamo",
       "category": "Maison",
-      "origin": "https://www.ferragamo.com"
+      "origin": "https://www.ferragamo.com",
+      "pdp": ""
     },
     {
       "name": "Rick Owens",
       "category": "Maison",
-      "origin": "https://www.rickowens.eu"
+      "origin": "https://www.rickowens.eu",
+      "pdp": ""
     },
     {
       "name": "Armani",
       "category": "Maison",
-      "origin": "https://www.armani.com"
+      "origin": "https://www.armani.com",
+      "pdp": ""
     },
     {
       "name": "Maison Margiela",
       "category": "Maison",
-      "origin": "https://www.maisonmargiela.com"
+      "origin": "https://www.maisonmargiela.com",
+      "pdp": ""
     },
     {
       "name": "Balmain",
       "category": "Maison",
-      "origin": "https://www.balmain.com"
+      "origin": "https://www.balmain.com",
+      "pdp": ""
     },
     {
       "name": "Kenzo",
       "category": "Maison",
-      "origin": "https://www.kenzo.com"
+      "origin": "https://www.kenzo.com",
+      "pdp": ""
     },
     {
       "name": "Jean Paul Gaultier",
       "category": "Maison",
-      "origin": "https://www.jeanpaulgaultier.com"
+      "origin": "https://www.jeanpaulgaultier.com",
+      "pdp": ""
     },
     {
       "name": "Jacquemus",
       "category": "Maison",
-      "origin": "https://www.jacquemus.com"
+      "origin": "https://www.jacquemus.com",
+      "pdp": ""
     },
     {
       "name": "Cartier",
       "category": "Maison",
-      "origin": "https://www.cartier.com"
+      "origin": "https://www.cartier.com",
+      "pdp": ""
     },
     {
       "name": "Louis Vuitton",
       "category": "Maison",
-      "origin": "https://us.louisvuitton.com"
+      "origin": "https://us.louisvuitton.com",
+      "pdp": ""
     },
     {
       "name": "Givenchy",
       "category": "Maison",
-      "origin": "https://www.givenchy.com"
+      "origin": "https://www.givenchy.com",
+      "pdp": ""
     },
     {
       "name": "Acne Studios",
       "category": "Maison",
-      "origin": "https://www.acnestudios.com"
+      "origin": "https://www.acnestudios.com",
+      "pdp": ""
     }
   ]
 }

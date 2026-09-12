@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T13:33:40+00:00",
+  "generated_at": "2026-09-12T13:59:53+00:00",
   "weights": {
     "A": 25,
     "B": 15,
@@ -31,7 +31,7 @@
     {
       "name": "Hermès",
       "origin": "https://www.hermes.com",
-      "pdp": "https://www.hermes.com/fr/fr/product/bottes-jumping-H042138Zv01/?size=395&utm_source=google&utm_medium=cpc&utm_campaign=FR_FR_DEFENSIVE_CATZ01_SHOES_PLAFEED&utm_term=Boots_femmes&gad_source=1&gad_campaignid=10517451106&gbraid=0AAAAAD9GsCuvXs-bBiljUk-hQJnI60HU-&gclid=Cj0KCQjw8JPVBhD-ARIsAO691sGG2qZ9yGlbb_qX5ci9sPPoy-hsrWLr2aGn_qVvgyeH0-HR8ZJQzqwaAkiIEALw_wcB",
+      "pdp": "https://www.hermes.com/fr/fr/product/bottes-jumping-H042138Zv01/",
       "agentic": {
         "score_0_100": 100.0,
         "score_1_10": 10.0,
@@ -79,67 +79,23 @@
       }
     },
     {
-      "name": "Burberry",
-      "origin": "https://www.burberry.com",
-      "pdp": null,
-      "agentic": {
-        "score_0_100": 100.0,
-        "score_1_10": 10.0,
-        "coverage_pct": 10,
-        "blocked": false,
-        "missing": [
-          "A",
-          "B",
-          "D",
-          "E",
-          "F"
-        ]
-      },
-      "components": {
-        "A": null,
-        "B": null,
-        "C": 100.0,
-        "D": null,
-        "E": null,
-        "F": null
-      },
-      "detail": {
-        "access": {
-          "ai_access": "all AI agents allowed",
-          "ai_score": 100.0,
-          "sitemap": true,
-          "llms_txt": true
-        },
-        "pdp": {
-          "note": "no pdp url"
-        },
-        "manual": {
-          "purchase": "",
-          "guest_checkout": "",
-          "payment_rails": ""
-        }
-      }
-    },
-    {
       "name": "The Row",
       "origin": "https://www.therow.com",
-      "pdp": null,
+      "pdp": "https://www.therow.com/fr-fr/products/90s-bag-dark-pine-ans",
       "agentic": {
         "score_0_100": 100.0,
         "score_1_10": 10.0,
-        "coverage_pct": 10,
+        "coverage_pct": 50,
         "blocked": false,
         "missing": [
-          "A",
-          "B",
           "D",
           "E",
           "F"
         ]
       },
       "components": {
-        "A": null,
-        "B": null,
+        "A": 100.0,
+        "B": 100.0,
         "C": 100.0,
         "D": null,
         "E": null,
@@ -153,49 +109,17 @@
           "llms_txt": true
         },
         "pdp": {
-          "note": "no pdp url"
-        },
-        "manual": {
-          "purchase": "",
-          "guest_checkout": "",
-          "payment_rails": ""
-        }
-      }
-    },
-    {
-      "name": "Rick Owens",
-      "origin": "https://www.rickowens.eu",
-      "pdp": null,
-      "agentic": {
-        "score_0_100": 100.0,
-        "score_1_10": 10.0,
-        "coverage_pct": 10,
-        "blocked": false,
-        "missing": [
-          "A",
-          "B",
-          "D",
-          "E",
-          "F"
-        ]
-      },
-      "components": {
-        "A": null,
-        "B": null,
-        "C": 100.0,
-        "D": null,
-        "E": null,
-        "F": null
-      },
-      "detail": {
-        "access": {
-          "ai_access": "all AI agents allowed",
-          "ai_score": 100.0,
-          "sitemap": true,
-          "llms_txt": true
-        },
-        "pdp": {
-          "note": "no pdp url"
+          "status": 200,
+          "structured": {
+            "products": 1,
+            "price": true,
+            "availability": true
+          },
+          "readability": {
+            "name": true,
+            "price": true,
+            "availability": true
+          }
         },
         "manual": {
           "purchase": "",
@@ -207,23 +131,21 @@
     {
       "name": "Balmain",
       "origin": "https://www.balmain.com",
-      "pdp": null,
+      "pdp": "https://balmain.com/fr-fr/products/64-83-medium-bag-in-smooth-leather-black-hn0bl096lmrk0pa",
       "agentic": {
         "score_0_100": 100.0,
         "score_1_10": 10.0,
-        "coverage_pct": 10,
+        "coverage_pct": 50,
         "blocked": false,
         "missing": [
-          "A",
-          "B",
           "D",
           "E",
           "F"
         ]
       },
       "components": {
-        "A": null,
-        "B": null,
+        "A": 100.0,
+        "B": 100.0,
         "C": 100.0,
         "D": null,
         "E": null,
@@ -237,49 +159,17 @@
           "llms_txt": true
         },
         "pdp": {
-          "note": "no pdp url"
-        },
-        "manual": {
-          "purchase": "",
-          "guest_checkout": "",
-          "payment_rails": ""
-        }
-      }
-    },
-    {
-      "name": "Jean Paul Gaultier",
-      "origin": "https://www.jeanpaulgaultier.com",
-      "pdp": null,
-      "agentic": {
-        "score_0_100": 100.0,
-        "score_1_10": 10.0,
-        "coverage_pct": 10,
-        "blocked": false,
-        "missing": [
-          "A",
-          "B",
-          "D",
-          "E",
-          "F"
-        ]
-      },
-      "components": {
-        "A": null,
-        "B": null,
-        "C": 100.0,
-        "D": null,
-        "E": null,
-        "F": null
-      },
-      "detail": {
-        "access": {
-          "ai_access": "all AI agents allowed",
-          "ai_score": 100.0,
-          "sitemap": true,
-          "llms_txt": true
-        },
-        "pdp": {
-          "note": "no pdp url"
+          "status": 200,
+          "structured": {
+            "products": 1,
+            "price": true,
+            "availability": true
+          },
+          "readability": {
+            "name": true,
+            "price": true,
+            "availability": true
+          }
         },
         "manual": {
           "purchase": "",
@@ -315,6 +205,306 @@
         "access": {
           "ai_access": "all AI agents allowed",
           "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "status": 200,
+          "structured": {
+            "products": 1,
+            "price": true,
+            "availability": true
+          },
+          "readability": {
+            "name": true,
+            "price": true,
+            "availability": true
+          }
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Miu Miu",
+      "origin": "https://www.miumiu.com",
+      "pdp": "https://www.miumiu.com/fr/fr/p/baskets-newbalance-xmiu-miu-530-sl-en-suede-et-mesh/5E165E_Z5O_F0379_F_D005",
+      "agentic": {
+        "score_0_100": 96.0,
+        "score_1_10": 9.6,
+        "coverage_pct": 50,
+        "blocked": false,
+        "missing": [
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": 100.0,
+        "B": 100.0,
+        "C": 80.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "status": 200,
+          "structured": {
+            "products": 1,
+            "price": true,
+            "availability": true
+          },
+          "readability": {
+            "name": true,
+            "price": true,
+            "availability": true
+          }
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Dior",
+      "origin": "https://www.dior.com",
+      "pdp": "https://www.dior.com/fr_fr/fashion/products/M0455CBAA_M900",
+      "agentic": {
+        "score_0_100": 96.0,
+        "score_1_10": 9.6,
+        "coverage_pct": 50,
+        "blocked": false,
+        "missing": [
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": 100.0,
+        "B": 100.0,
+        "C": 80.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "status": 200,
+          "structured": {
+            "products": 1,
+            "price": true,
+            "availability": true
+          },
+          "readability": {
+            "name": true,
+            "price": true,
+            "availability": true
+          }
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Valentino",
+      "origin": "https://www.valentino.com",
+      "pdp": "https://www.valentino.com/fr-fr/product-rockstud-kidskin-pumps-100mm-WS0PV4WZD_0NO",
+      "agentic": {
+        "score_0_100": 96.0,
+        "score_1_10": 9.6,
+        "coverage_pct": 50,
+        "blocked": false,
+        "missing": [
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": 100.0,
+        "B": 100.0,
+        "C": 80.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "status": 200,
+          "structured": {
+            "products": 1,
+            "price": true,
+            "availability": true
+          },
+          "readability": {
+            "name": true,
+            "price": true,
+            "availability": true
+          }
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Maison Margiela",
+      "origin": "https://www.maisonmargiela.com",
+      "pdp": "https://www.maisonmargiela.com/fr-fr/ballerine-tabi-S58WZ0127P3753T8013.html",
+      "agentic": {
+        "score_0_100": 96.0,
+        "score_1_10": 9.6,
+        "coverage_pct": 50,
+        "blocked": false,
+        "missing": [
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": 100.0,
+        "B": 100.0,
+        "C": 80.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "status": 200,
+          "structured": {
+            "products": 1,
+            "price": true,
+            "availability": true
+          },
+          "readability": {
+            "name": true,
+            "price": true,
+            "availability": true
+          }
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Kenzo",
+      "origin": "https://www.kenzo.com",
+      "pdp": "https://www.kenzo.com/fr-fr/cape-militaire-kenzo-checks-en-laine-melangee/FG62MA2509PB.03.html",
+      "agentic": {
+        "score_0_100": 96.0,
+        "score_1_10": 9.6,
+        "coverage_pct": 50,
+        "blocked": false,
+        "missing": [
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": 100.0,
+        "B": 100.0,
+        "C": 80.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "status": 200,
+          "structured": {
+            "products": 1,
+            "price": true,
+            "availability": true
+          },
+          "readability": {
+            "name": true,
+            "price": true,
+            "availability": true
+          }
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Armani",
+      "origin": "https://www.armani.com",
+      "pdp": "https://www.armani.com/fr-fr/giorgio-armani/sac-a-bandouliere-en-cuir-graine-avec-pochette-zippee-cod-GW003752-AF14187-U8107/",
+      "agentic": {
+        "score_0_100": 93.5,
+        "score_1_10": 9.3,
+        "coverage_pct": 50,
+        "blocked": false,
+        "missing": [
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": 100.0,
+        "B": 100.0,
+        "C": 67.5,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "blocks bytespider, amazonbot",
+          "ai_score": 75.0,
           "sitemap": true,
           "llms_txt": false
         },
@@ -382,98 +572,14 @@
       }
     },
     {
-      "name": "Miu Miu",
-      "origin": "https://www.miumiu.com",
-      "pdp": null,
-      "agentic": {
-        "score_0_100": 80.0,
-        "score_1_10": 8.0,
-        "coverage_pct": 10,
-        "blocked": false,
-        "missing": [
-          "A",
-          "B",
-          "D",
-          "E",
-          "F"
-        ]
-      },
-      "components": {
-        "A": null,
-        "B": null,
-        "C": 80.0,
-        "D": null,
-        "E": null,
-        "F": null
-      },
-      "detail": {
-        "access": {
-          "ai_access": "all AI agents allowed",
-          "ai_score": 100.0,
-          "sitemap": true,
-          "llms_txt": false
-        },
-        "pdp": {
-          "note": "no pdp url"
-        },
-        "manual": {
-          "purchase": "",
-          "guest_checkout": "",
-          "payment_rails": ""
-        }
-      }
-    },
-    {
-      "name": "Dior",
-      "origin": "https://www.dior.com",
-      "pdp": null,
-      "agentic": {
-        "score_0_100": 80.0,
-        "score_1_10": 8.0,
-        "coverage_pct": 10,
-        "blocked": false,
-        "missing": [
-          "A",
-          "B",
-          "D",
-          "E",
-          "F"
-        ]
-      },
-      "components": {
-        "A": null,
-        "B": null,
-        "C": 80.0,
-        "D": null,
-        "E": null,
-        "F": null
-      },
-      "detail": {
-        "access": {
-          "ai_access": "all AI agents allowed",
-          "ai_score": 100.0,
-          "sitemap": true,
-          "llms_txt": false
-        },
-        "pdp": {
-          "note": "no pdp url"
-        },
-        "manual": {
-          "purchase": "",
-          "guest_checkout": "",
-          "payment_rails": ""
-        }
-      }
-    },
-    {
       "name": "Marc Jacobs",
       "origin": "https://www.marcjacobs.com",
-      "pdp": null,
+      "pdp": "https://www.marcjacobs.com/fr-fr/the-leather-medium-tote-bag/H004L01PF21-545.html",
       "agentic": {
         "score_0_100": 80.0,
         "score_1_10": 8.0,
         "coverage_pct": 10,
-        "blocked": false,
+        "blocked": true,
         "missing": [
           "A",
           "B",
@@ -498,7 +604,8 @@
           "llms_txt": false
         },
         "pdp": {
-          "note": "no pdp url"
+          "blocked": true,
+          "status": 403
         },
         "manual": {
           "purchase": "",
@@ -510,12 +617,12 @@
     {
       "name": "Ralph Lauren",
       "origin": "https://www.ralphlauren.com",
-      "pdp": null,
+      "pdp": "https://www.ralphlauren.fr/en/the-iconic-custom-slim-fit-mesh-polo-401481.html?dwvar401481_colorname=White%2FNavy&cgid=men-clothing-poloshirts#start=1&cgid=men-clothing-poloshirts",
       "agentic": {
         "score_0_100": 80.0,
         "score_1_10": 8.0,
         "coverage_pct": 10,
-        "blocked": false,
+        "blocked": true,
         "missing": [
           "A",
           "B",
@@ -540,49 +647,8 @@
           "llms_txt": false
         },
         "pdp": {
-          "note": "no pdp url"
-        },
-        "manual": {
-          "purchase": "",
-          "guest_checkout": "",
-          "payment_rails": ""
-        }
-      }
-    },
-    {
-      "name": "Valentino",
-      "origin": "https://www.valentino.com",
-      "pdp": null,
-      "agentic": {
-        "score_0_100": 80.0,
-        "score_1_10": 8.0,
-        "coverage_pct": 10,
-        "blocked": false,
-        "missing": [
-          "A",
-          "B",
-          "D",
-          "E",
-          "F"
-        ]
-      },
-      "components": {
-        "A": null,
-        "B": null,
-        "C": 80.0,
-        "D": null,
-        "E": null,
-        "F": null
-      },
-      "detail": {
-        "access": {
-          "ai_access": "all AI agents allowed",
-          "ai_score": 100.0,
-          "sitemap": true,
-          "llms_txt": false
-        },
-        "pdp": {
-          "note": "no pdp url"
+          "blocked": true,
+          "status": 403
         },
         "manual": {
           "purchase": "",
@@ -594,12 +660,12 @@
     {
       "name": "Stella McCartney",
       "origin": "https://www.stellamccartney.com",
-      "pdp": null,
+      "pdp": "https://www.stellamccartney.com/gb/en/women/the-iconic-falabella/falabella-fold-over-tote-bag-234387W91321000.html",
       "agentic": {
         "score_0_100": 80.0,
         "score_1_10": 8.0,
         "coverage_pct": 10,
-        "blocked": false,
+        "blocked": true,
         "missing": [
           "A",
           "B",
@@ -624,175 +690,8 @@
           "llms_txt": false
         },
         "pdp": {
-          "note": "no pdp url"
-        },
-        "manual": {
-          "purchase": "",
-          "guest_checkout": "",
-          "payment_rails": ""
-        }
-      }
-    },
-    {
-      "name": "Loewe",
-      "origin": "https://www.loewe.com",
-      "pdp": null,
-      "agentic": {
-        "score_0_100": 80.0,
-        "score_1_10": 8.0,
-        "coverage_pct": 10,
-        "blocked": false,
-        "missing": [
-          "A",
-          "B",
-          "D",
-          "E",
-          "F"
-        ]
-      },
-      "components": {
-        "A": null,
-        "B": null,
-        "C": 80.0,
-        "D": null,
-        "E": null,
-        "F": null
-      },
-      "detail": {
-        "access": {
-          "ai_access": "all AI agents allowed",
-          "ai_score": 100.0,
-          "sitemap": true,
-          "llms_txt": false
-        },
-        "pdp": {
-          "note": "no pdp url"
-        },
-        "manual": {
-          "purchase": "",
-          "guest_checkout": "",
-          "payment_rails": ""
-        }
-      }
-    },
-    {
-      "name": "Chloé",
-      "origin": "https://www.chloe.com",
-      "pdp": null,
-      "agentic": {
-        "score_0_100": 80.0,
-        "score_1_10": 8.0,
-        "coverage_pct": 10,
-        "blocked": false,
-        "missing": [
-          "A",
-          "B",
-          "D",
-          "E",
-          "F"
-        ]
-      },
-      "components": {
-        "A": null,
-        "B": null,
-        "C": 80.0,
-        "D": null,
-        "E": null,
-        "F": null
-      },
-      "detail": {
-        "access": {
-          "ai_access": "all AI agents allowed",
-          "ai_score": 100.0,
-          "sitemap": true,
-          "llms_txt": false
-        },
-        "pdp": {
-          "note": "no pdp url"
-        },
-        "manual": {
-          "purchase": "",
-          "guest_checkout": "",
-          "payment_rails": ""
-        }
-      }
-    },
-    {
-      "name": "Maison Margiela",
-      "origin": "https://www.maisonmargiela.com",
-      "pdp": null,
-      "agentic": {
-        "score_0_100": 80.0,
-        "score_1_10": 8.0,
-        "coverage_pct": 10,
-        "blocked": false,
-        "missing": [
-          "A",
-          "B",
-          "D",
-          "E",
-          "F"
-        ]
-      },
-      "components": {
-        "A": null,
-        "B": null,
-        "C": 80.0,
-        "D": null,
-        "E": null,
-        "F": null
-      },
-      "detail": {
-        "access": {
-          "ai_access": "all AI agents allowed",
-          "ai_score": 100.0,
-          "sitemap": true,
-          "llms_txt": false
-        },
-        "pdp": {
-          "note": "no pdp url"
-        },
-        "manual": {
-          "purchase": "",
-          "guest_checkout": "",
-          "payment_rails": ""
-        }
-      }
-    },
-    {
-      "name": "Kenzo",
-      "origin": "https://www.kenzo.com",
-      "pdp": null,
-      "agentic": {
-        "score_0_100": 80.0,
-        "score_1_10": 8.0,
-        "coverage_pct": 10,
-        "blocked": false,
-        "missing": [
-          "A",
-          "B",
-          "D",
-          "E",
-          "F"
-        ]
-      },
-      "components": {
-        "A": null,
-        "B": null,
-        "C": 80.0,
-        "D": null,
-        "E": null,
-        "F": null
-      },
-      "detail": {
-        "access": {
-          "ai_access": "all AI agents allowed",
-          "ai_score": 100.0,
-          "sitemap": true,
-          "llms_txt": false
-        },
-        "pdp": {
-          "note": "no pdp url"
+          "blocked": true,
+          "status": 200
         },
         "manual": {
           "purchase": "",
@@ -804,12 +703,12 @@
     {
       "name": "Cartier",
       "origin": "https://www.cartier.com",
-      "pdp": null,
+      "pdp": "https://www.cartier.com/fr-fr/watches/collections/panthere-de-cartier/montre-panthere-de-cartier-CRWSPN0013",
       "agentic": {
         "score_0_100": 80.0,
         "score_1_10": 8.0,
         "coverage_pct": 10,
-        "blocked": false,
+        "blocked": true,
         "missing": [
           "A",
           "B",
@@ -834,7 +733,8 @@
           "llms_txt": false
         },
         "pdp": {
-          "note": "no pdp url"
+          "blocked": true,
+          "status": 403
         },
         "manual": {
           "purchase": "",
@@ -844,81 +744,47 @@
       }
     },
     {
-      "name": "Acne Studios",
-      "origin": "https://www.acnestudios.com",
-      "pdp": null,
+      "name": "Burberry",
+      "origin": "https://www.burberry.com",
+      "pdp": "https://row.burberry.com/long-gabardine-lakefield-trench-coat-p81323091",
       "agentic": {
-        "score_0_100": 73.8,
-        "score_1_10": 7.4,
-        "coverage_pct": 10,
+        "score_0_100": 52.5,
+        "score_1_10": 5.2,
+        "coverage_pct": 50,
         "blocked": false,
         "missing": [
-          "A",
-          "B",
           "D",
           "E",
           "F"
         ]
       },
       "components": {
-        "A": null,
-        "B": null,
-        "C": 73.8,
+        "A": 25.0,
+        "B": 66.7,
+        "C": 100.0,
         "D": null,
         "E": null,
         "F": null
       },
       "detail": {
         "access": {
-          "ai_access": "blocks bytespider",
-          "ai_score": 87.5,
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
           "sitemap": true,
-          "llms_txt": false
+          "llms_txt": true
         },
         "pdp": {
-          "note": "no pdp url"
-        },
-        "manual": {
-          "purchase": "",
-          "guest_checkout": "",
-          "payment_rails": ""
-        }
-      }
-    },
-    {
-      "name": "Armani",
-      "origin": "https://www.armani.com",
-      "pdp": null,
-      "agentic": {
-        "score_0_100": 67.5,
-        "score_1_10": 6.8,
-        "coverage_pct": 10,
-        "blocked": false,
-        "missing": [
-          "A",
-          "B",
-          "D",
-          "E",
-          "F"
-        ]
-      },
-      "components": {
-        "A": null,
-        "B": null,
-        "C": 67.5,
-        "D": null,
-        "E": null,
-        "F": null
-      },
-      "detail": {
-        "access": {
-          "ai_access": "blocks bytespider, amazonbot",
-          "ai_score": 75.0,
-          "sitemap": true,
-          "llms_txt": false
-        },
-        "pdp": {
-          "note": "no pdp url"
+          "status": 200,
+          "structured": {
+            "products": 1,
+            "price": false,
+            "availability": false
+          },
+          "readability": {
+            "name": true,
+            "price": true,
+            "availability": false
+          }
         },
         "manual": {
           "purchase": "",
@@ -930,12 +796,12 @@
     {
       "name": "Saint Laurent",
       "origin": "https://www.ysl.com",
-      "pdp": null,
+      "pdp": "https://www.ysl.com/fr-fr/pr/mombasa-medium-en-cuir-862029AAGWJ1000.html",
       "agentic": {
         "score_0_100": 50.0,
         "score_1_10": 5.0,
         "coverage_pct": 10,
-        "blocked": false,
+        "blocked": true,
         "missing": [
           "A",
           "B",
@@ -960,7 +826,8 @@
           "llms_txt": false
         },
         "pdp": {
-          "note": "no pdp url"
+          "blocked": true,
+          "status": 403
         },
         "manual": {
           "purchase": "",
@@ -972,12 +839,12 @@
     {
       "name": "Bottega Veneta",
       "origin": "https://www.bottegaveneta.com",
-      "pdp": null,
+      "pdp": "https://www.bottegaveneta.com/en-fr/andiamo-sea-salt-766016VCPP19211.html",
       "agentic": {
         "score_0_100": 50.0,
         "score_1_10": 5.0,
         "coverage_pct": 10,
-        "blocked": false,
+        "blocked": true,
         "missing": [
           "A",
           "B",
@@ -1002,7 +869,8 @@
           "llms_txt": false
         },
         "pdp": {
-          "note": "no pdp url"
+          "blocked": true,
+          "status": 403
         },
         "manual": {
           "purchase": "",
@@ -1014,7 +882,7 @@
     {
       "name": "Gucci",
       "origin": "https://www.gucci.com",
-      "pdp": null,
+      "pdp": "https://www.gucci.com/fr/fr/pr/women/shoes-for-women/mules-for-women/womens-princetown-slipper-p-813864AADCW1000",
       "agentic": {
         "score_0_100": 50.0,
         "score_1_10": 5.0,
@@ -1044,7 +912,7 @@
           "llms_txt": false
         },
         "pdp": {
-          "note": "no pdp url"
+          "error": "fetch failed"
         },
         "manual": {
           "purchase": "",
@@ -1056,7 +924,7 @@
     {
       "name": "Fendi",
       "origin": "https://www.fendi.com",
-      "pdp": null,
+      "pdp": "https://www.fendi.com/fr-fr/femme/sacs/baguette-26424-sac-en-sequins-violets-8br850b086f0qj7",
       "agentic": {
         "score_0_100": 50.0,
         "score_1_10": 5.0,
@@ -1086,7 +954,7 @@
           "llms_txt": false
         },
         "pdp": {
-          "note": "no pdp url"
+          "error": "fetch failed"
         },
         "manual": {
           "purchase": "",
@@ -1098,12 +966,12 @@
     {
       "name": "Balenciaga",
       "origin": "https://www.balenciaga.com",
-      "pdp": null,
+      "pdp": "https://www.balenciaga.com/en-fr/le-city-bag-medium-black-8657602ACFH1000.html",
       "agentic": {
         "score_0_100": 50.0,
         "score_1_10": 5.0,
         "coverage_pct": 10,
-        "blocked": false,
+        "blocked": true,
         "missing": [
           "A",
           "B",
@@ -1128,7 +996,8 @@
           "llms_txt": false
         },
         "pdp": {
-          "note": "no pdp url"
+          "blocked": true,
+          "status": 403
         },
         "manual": {
           "purchase": "",
@@ -1140,12 +1009,12 @@
     {
       "name": "Versace",
       "origin": "https://www.versace.com",
-      "pdp": null,
+      "pdp": "https://www.versace.com/fr/fr/femme/sacs/sacs-portes-epaule/pivot-mini-sac-seau-en-cuir-/1026048-1A19197_1B55J.html?_gl=1*c5nolt*_up*MQ..*_gs*MQ..&gclid=Cj0KCQjw8JPVBhD-ARIsAO691sFxlOHAoAMW47DA6sSXegtedk0a2j0uEoBGHg2UKiTuX0PQtZkGVqkaAuiFEALw_wcB&gclsrc=aw.ds&gbraid=0AAAAADnzP0ZYVBRshRdEH6zFmTe0gi33U",
       "agentic": {
         "score_0_100": 50.0,
         "score_1_10": 5.0,
         "coverage_pct": 10,
-        "blocked": false,
+        "blocked": true,
         "missing": [
           "A",
           "B",
@@ -1170,7 +1039,8 @@
           "llms_txt": false
         },
         "pdp": {
-          "note": "no pdp url"
+          "blocked": true,
+          "status": 403
         },
         "manual": {
           "purchase": "",
@@ -1182,7 +1052,7 @@
     {
       "name": "Alexander McQueen",
       "origin": "https://www.alexandermcqueen.com",
-      "pdp": null,
+      "pdp": "alexandermcqueen.com/fr-fr/pr/sneakers-oversize-553770WIAKY9556.html",
       "agentic": {
         "score_0_100": 50.0,
         "score_1_10": 5.0,
@@ -1212,7 +1082,7 @@
           "llms_txt": false
         },
         "pdp": {
-          "note": "no pdp url"
+          "error": "fetch failed"
         },
         "manual": {
           "purchase": "",
@@ -1224,12 +1094,12 @@
     {
       "name": "Ferragamo",
       "origin": "https://www.ferragamo.com",
-      "pdp": null,
+      "pdp": "https://www.ferragamo.com/shop/fra/fr/femmes/sacs-%C3%A0-main/Sacs-port%C3%A9-%C3%A9paule/hug-sh-s-793350--2",
       "agentic": {
         "score_0_100": 50.0,
         "score_1_10": 5.0,
         "coverage_pct": 10,
-        "blocked": false,
+        "blocked": true,
         "missing": [
           "A",
           "B",
@@ -1254,7 +1124,8 @@
           "llms_txt": false
         },
         "pdp": {
-          "note": "no pdp url"
+          "blocked": true,
+          "status": 403
         },
         "manual": {
           "purchase": "",
@@ -1308,12 +1179,12 @@
     {
       "name": "Louis Vuitton",
       "origin": "https://us.louisvuitton.com",
-      "pdp": null,
+      "pdp": "https://fr.louisvuitton.com/fra-fr/produits/sac-neverfull-mm-monogram-nvprod5350101v/M46987",
       "agentic": {
         "score_0_100": 50.0,
         "score_1_10": 5.0,
         "coverage_pct": 10,
-        "blocked": false,
+        "blocked": true,
         "missing": [
           "A",
           "B",
@@ -1338,7 +1209,8 @@
           "llms_txt": false
         },
         "pdp": {
-          "note": "no pdp url"
+          "blocked": true,
+          "status": 403
         },
         "manual": {
           "purchase": "",
@@ -1350,12 +1222,12 @@
     {
       "name": "Givenchy",
       "origin": "https://www.givenchy.com",
-      "pdp": null,
+      "pdp": "https://www.givenchy.com/fr/en/mini-antigona-bag-in-box-leather/BB5148B1R0-001.html",
       "agentic": {
         "score_0_100": 50.0,
         "score_1_10": 5.0,
         "coverage_pct": 10,
-        "blocked": false,
+        "blocked": true,
         "missing": [
           "A",
           "B",
@@ -1380,7 +1252,200 @@
           "llms_txt": false
         },
         "pdp": {
-          "note": "no pdp url"
+          "blocked": true,
+          "status": 403
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Rick Owens",
+      "origin": "https://www.rickowens.eu",
+      "pdp": "https://www.rickowens.eu/en-fr/products/ra01f0862lge09",
+      "agentic": {
+        "score_0_100": 40.0,
+        "score_1_10": 4.0,
+        "coverage_pct": 50,
+        "blocked": false,
+        "missing": [
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": 0.0,
+        "B": 66.7,
+        "C": 100.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": true
+        },
+        "pdp": {
+          "status": 200,
+          "structured": {
+            "products": 0
+          },
+          "readability": {
+            "name": true,
+            "price": true,
+            "availability": false
+          }
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Jean Paul Gaultier",
+      "origin": "https://www.jeanpaulgaultier.com",
+      "pdp": "https://fashion.jeanpaulgaultier.com/en-fr/products/the-junior-body-map-top?size=XXS",
+      "agentic": {
+        "score_0_100": 30.0,
+        "score_1_10": 3.0,
+        "coverage_pct": 50,
+        "blocked": false,
+        "missing": [
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": 0.0,
+        "B": 33.3,
+        "C": 100.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": true
+        },
+        "pdp": {
+          "status": 200,
+          "structured": {
+            "products": 0
+          },
+          "readability": {
+            "name": true,
+            "price": false,
+            "availability": false
+          }
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Loewe",
+      "origin": "https://www.loewe.com",
+      "pdp": "https://www.loewe.com/eur/fr/femme/sacs/puzzle/petit-sac-puzzle-edge-en-cuir-de-veau-graine-souple/A510P60X77-5544.html",
+      "agentic": {
+        "score_0_100": 26.0,
+        "score_1_10": 2.6,
+        "coverage_pct": 50,
+        "blocked": false,
+        "missing": [
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": 0.0,
+        "B": 33.3,
+        "C": 80.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "status": 200,
+          "structured": {
+            "products": 0
+          },
+          "readability": {
+            "name": true,
+            "price": false,
+            "availability": false
+          }
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Acne Studios",
+      "origin": "https://www.acnestudios.com",
+      "pdp": "https://www.acnestudios.com/fr/fr/musubi-midi-new-r/A10361-900.html?g=man",
+      "agentic": {
+        "score_0_100": 24.8,
+        "score_1_10": 2.5,
+        "coverage_pct": 50,
+        "blocked": false,
+        "missing": [
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": 0.0,
+        "B": 33.3,
+        "C": 73.8,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "blocks bytespider",
+          "ai_score": 87.5,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "status": 200,
+          "structured": {
+            "products": 0
+          },
+          "readability": {
+            "name": true,
+            "price": false,
+            "availability": false
+          }
         },
         "manual": {
           "purchase": "",
@@ -1392,7 +1457,55 @@
     {
       "name": "Alaïa",
       "origin": "https://www.maison-alaia.com",
-      "pdp": "https://www.maison-alaia.com/fr-fr/product/chaussures-plates/ballerines-en-resille-AA3A029TK007999.html?utm_source=google&utm_source_platform=SA360&utm_medium=cpc&utm_campaign=A-AALHQ-FR-FR-PLA_BR_NEW_COL-BRST-FY25-MTP-MULTIPLE_COLLECTIONS-PLA-AUC-PU-LXA-GG-BR-RIC48BQ5YMQ&utm_id=20210708544&gclsrc=aw.ds&gad_source=1&gad_campaignid=20210708544&gbraid=0AAAAACPkAuIQpL2qa1vA4lo_J24P4PUVS&gclid=Cj0KCQjw8JPVBhD-ARIsAO691sGWwgKs1sjLw-b9hz8shvrlll_Bo_K3v1_pMROCncRLEhJjiqTGFlkaAkufEALw_wcB",
+      "pdp": "https://www.maison-alaia.com/fr-fr/product/chaussures-plates/ballerines-en-resille-AA3A029TK007999.html",
+      "agentic": {
+        "score_0_100": 16.0,
+        "score_1_10": 1.6,
+        "coverage_pct": 50,
+        "blocked": false,
+        "missing": [
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 80.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "status": 200,
+          "structured": {
+            "products": 0
+          },
+          "readability": {
+            "name": false,
+            "price": false,
+            "availability": false
+          }
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Chloé",
+      "origin": "https://www.chloe.com",
+      "pdp": "https://www.chloe.com/fr-fr/p/bags/shoulder-bag/CH25WS802P75001.html",
       "agentic": {
         "score_0_100": 16.0,
         "score_1_10": 1.6,

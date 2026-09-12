@@ -12,13 +12,13 @@
       "name": "Hermès",
       "category": "Maison",
       "origin": "https://www.hermes.com",
-      "pdp": "https://www.hermes.com/fr/fr/product/bottes-jumping-H042138Zv01/?size=395&utm_source=google&utm_medium=cpc&utm_campaign=FR_FR_DEFENSIVE_CATZ01_SHOES_PLAFEED&utm_term=Boots_femmes&gad_source=1&gad_campaignid=10517451106&gbraid=0AAAAAD9GsCuvXs-bBiljUk-hQJnI60HU-&gclid=Cj0KCQjw8JPVBhD-ARIsAO691sGG2qZ9yGlbb_qX5ci9sPPoy-hsrWLr2aGn_qVvgyeH0-HR8ZJQzqwaAkiIEALw_wcB"
+      "pdp": "https://www.hermes.com/fr/fr/product/bottes-jumping-H042138Zv01/"
     },
     {
       "name": "Alaïa",
       "category": "Maison",
       "origin": "https://www.maison-alaia.com",
-      "pdp": "https://www.maison-alaia.com/fr-fr/product/chaussures-plates/ballerines-en-resille-AA3A029TK007999.html?utm_source=google&utm_source_platform=SA360&utm_medium=cpc&utm_campaign=A-AALHQ-FR-FR-PLA_BR_NEW_COL-BRST-FY25-MTP-MULTIPLE_COLLECTIONS-PLA-AUC-PU-LXA-GG-BR-RIC48BQ5YMQ&utm_id=20210708544&gclsrc=aw.ds&gad_source=1&gad_campaignid=20210708544&gbraid=0AAAAACPkAuIQpL2qa1vA4lo_J24P4PUVS&gclid=Cj0KCQjw8JPVBhD-ARIsAO691sGWwgKs1sjLw-b9hz8shvrlll_Bo_K3v1_pMROCncRLEhJjiqTGFlkaAkufEALw_wcB"
+      "pdp": "https://www.maison-alaia.com/fr-fr/product/chaussures-plates/ballerines-en-resille-AA3A029TK007999.html"
     },
     {
       "name": "Prada",
@@ -30,55 +30,55 @@
       "name": "Miu Miu",
       "category": "Maison",
       "origin": "https://www.miumiu.com",
-      "pdp": ""
+      "pdp": "https://www.miumiu.com/fr/fr/p/baskets-newbalance-xmiu-miu-530-sl-en-suede-et-mesh/5E165E_Z5O_F0379_F_D005"
     },
     {
       "name": "Dior",
       "category": "Maison",
       "origin": "https://www.dior.com",
-      "pdp": ""
+      "pdp": "https://www.dior.com/fr_fr/fashion/products/M0455CBAA_M900"
     },
     {
       "name": "Saint Laurent",
       "category": "Maison",
       "origin": "https://www.ysl.com",
-      "pdp": ""
+      "pdp": "https://www.ysl.com/fr-fr/pr/mombasa-medium-en-cuir-862029AAGWJ1000.html"
     },
     {
       "name": "Bottega Veneta",
       "category": "Maison",
       "origin": "https://www.bottegaveneta.com",
-      "pdp": ""
+      "pdp": "https://www.bottegaveneta.com/en-fr/andiamo-sea-salt-766016VCPP19211.html"
     },
     {
       "name": "Gucci",
       "category": "Maison",
       "origin": "https://www.gucci.com",
-      "pdp": ""
+      "pdp": "https://www.gucci.com/fr/fr/pr/women/shoes-for-women/mules-for-women/womens-princetown-slipper-p-813864AADCW1000"
     },
     {
       "name": "Fendi",
       "category": "Maison",
       "origin": "https://www.fendi.com",
-      "pdp": ""
+      "pdp": "https://www.fendi.com/fr-fr/femme/sacs/baguette-26424-sac-en-sequins-violets-8br850b086f0qj7"
     },
     {
       "name": "Marc Jacobs",
       "category": "Maison",
       "origin": "https://www.marcjacobs.com",
-      "pdp": ""
+      "pdp": "https://www.marcjacobs.com/fr-fr/the-leather-medium-tote-bag/H004L01PF21-545.html"
     },
     {
       "name": "Balenciaga",
       "category": "Maison",
       "origin": "https://www.balenciaga.com",
-      "pdp": ""
+      "pdp": "https://www.balenciaga.com/en-fr/le-city-bag-medium-black-8657602ACFH1000.html"
     },
     {
       "name": "Burberry",
       "category": "Maison",
       "origin": "https://www.burberry.com",
-      "pdp": ""
+      "pdp": "https://row.burberry.com/long-gabardine-lakefield-trench-coat-p81323091"
     },
     {
       "name": "Ralph Lauren",
@@ -186,19 +186,19 @@
       "name": "Louis Vuitton",
       "category": "Maison",
       "origin": "https://us.louisvuitton.com",
-      "pdp": ""
+      "pdp": "https://fr.louisvuitton.com/fra-fr/produits/sac-neverfull-mm-monogram-nvprod5350101v/M46987"
     },
     {
       "name": "Givenchy",
       "category": "Maison",
       "origin": "https://www.givenchy.com",
-      "pdp": ""
+      "pdp": "https://www.givenchy.com/fr/en/mini-antigona-bag-in-box-leather/BB5148B1R0-001.html"
     },
     {
       "name": "Acne Studios",
       "category": "Maison",
       "origin": "https://www.acnestudios.com",
-      "pdp": ""
+      "pdp": "https://www.acnestudios.com/fr/fr/musubi-midi-new-r/A10361-900.html?g=man"
     }
   ]
 }

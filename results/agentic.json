@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T13:59:53+00:00",
+  "generated_at": "2026-10-01T13:50:22+00:00",
   "weights": {
     "A": 25,
     "B": 15,
@@ -35,17 +35,19 @@
       "agentic": {
         "score_0_100": 100.0,
         "score_1_10": 10.0,
-        "coverage_pct": 50,
-        "blocked": false,
+        "coverage_pct": 10,
+        "blocked": true,
         "missing": [
+          "A",
+          "B",
           "D",
           "E",
           "F"
         ]
       },
       "components": {
-        "A": 100.0,
-        "B": 100.0,
+        "A": null,
+        "B": null,
         "C": 100.0,
         "D": null,
         "E": null,
@@ -59,17 +61,8 @@
           "llms_txt": true
         },
         "pdp": {
-          "status": 200,
-          "structured": {
-            "products": 1,
-            "price": true,
-            "availability": true
-          },
-          "readability": {
-            "name": true,
-            "price": true,
-            "availability": true
-          }
+          "blocked": true,
+          "status": 403
         },
         "manual": {
           "purchase": "",
@@ -179,109 +172,9 @@
       }
     },
     {
-      "name": "Prada",
-      "origin": "https://www.prada.com",
-      "pdp": "https://www.prada.com/fr/fr/p/grand-sac-prada-galleria-en-cuir-saffiano/1BA506_NZV_F0002_V_EPP",
-      "agentic": {
-        "score_0_100": 96.0,
-        "score_1_10": 9.6,
-        "coverage_pct": 50,
-        "blocked": false,
-        "missing": [
-          "D",
-          "E",
-          "F"
-        ]
-      },
-      "components": {
-        "A": 100.0,
-        "B": 100.0,
-        "C": 80.0,
-        "D": null,
-        "E": null,
-        "F": null
-      },
-      "detail": {
-        "access": {
-          "ai_access": "all AI agents allowed",
-          "ai_score": 100.0,
-          "sitemap": true,
-          "llms_txt": false
-        },
-        "pdp": {
-          "status": 200,
-          "structured": {
-            "products": 1,
-            "price": true,
-            "availability": true
-          },
-          "readability": {
-            "name": true,
-            "price": true,
-            "availability": true
-          }
-        },
-        "manual": {
-          "purchase": "",
-          "guest_checkout": "",
-          "payment_rails": ""
-        }
-      }
-    },
-    {
       "name": "Miu Miu",
       "origin": "https://www.miumiu.com",
       "pdp": "https://www.miumiu.com/fr/fr/p/baskets-newbalance-xmiu-miu-530-sl-en-suede-et-mesh/5E165E_Z5O_F0379_F_D005",
-      "agentic": {
-        "score_0_100": 96.0,
-        "score_1_10": 9.6,
-        "coverage_pct": 50,
-        "blocked": false,
-        "missing": [
-          "D",
-          "E",
-          "F"
-        ]
-      },
-      "components": {
-        "A": 100.0,
-        "B": 100.0,
-        "C": 80.0,
-        "D": null,
-        "E": null,
-        "F": null
-      },
-      "detail": {
-        "access": {
-          "ai_access": "all AI agents allowed",
-          "ai_score": 100.0,
-          "sitemap": true,
-          "llms_txt": false
-        },
-        "pdp": {
-          "status": 200,
-          "structured": {
-            "products": 1,
-            "price": true,
-            "availability": true
-          },
-          "readability": {
-            "name": true,
-            "price": true,
-            "availability": true
-          }
-        },
-        "manual": {
-          "purchase": "",
-          "guest_checkout": "",
-          "payment_rails": ""
-        }
-      }
-    },
-    {
-      "name": "Dior",
-      "origin": "https://www.dior.com",
-      "pdp": "https://www.dior.com/fr_fr/fashion/products/M0455CBAA_M900",
       "agentic": {
         "score_0_100": 96.0,
         "score_1_10": 9.6,
@@ -794,6 +687,49 @@
       }
     },
     {
+      "name": "Dior",
+      "origin": "https://www.dior.com",
+      "pdp": "https://www.dior.com/fr_fr/fashion/products/M0455CBAA_M900",
+      "agentic": {
+        "score_0_100": 50.0,
+        "score_1_10": 5.0,
+        "coverage_pct": 10,
+        "blocked": true,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 50.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": false,
+          "llms_txt": false
+        },
+        "pdp": {
+          "blocked": true,
+          "status": 403
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
       "name": "Saint Laurent",
       "origin": "https://www.ysl.com",
       "pdp": "https://www.ysl.com/fr-fr/pr/mombasa-medium-en-cuir-862029AAGWJ1000.html",
@@ -1263,54 +1199,6 @@
       }
     },
     {
-      "name": "Rick Owens",
-      "origin": "https://www.rickowens.eu",
-      "pdp": "https://www.rickowens.eu/en-fr/products/ra01f0862lge09",
-      "agentic": {
-        "score_0_100": 40.0,
-        "score_1_10": 4.0,
-        "coverage_pct": 50,
-        "blocked": false,
-        "missing": [
-          "D",
-          "E",
-          "F"
-        ]
-      },
-      "components": {
-        "A": 0.0,
-        "B": 66.7,
-        "C": 100.0,
-        "D": null,
-        "E": null,
-        "F": null
-      },
-      "detail": {
-        "access": {
-          "ai_access": "all AI agents allowed",
-          "ai_score": 100.0,
-          "sitemap": true,
-          "llms_txt": true
-        },
-        "pdp": {
-          "status": 200,
-          "structured": {
-            "products": 0
-          },
-          "readability": {
-            "name": true,
-            "price": true,
-            "availability": false
-          }
-        },
-        "manual": {
-          "purchase": "",
-          "guest_checkout": "",
-          "payment_rails": ""
-        }
-      }
-    },
-    {
       "name": "Jean Paul Gaultier",
       "origin": "https://www.jeanpaulgaultier.com",
       "pdp": "https://fashion.jeanpaulgaultier.com/en-fr/products/the-junior-body-map-top?size=XXS",
@@ -1359,9 +1247,9 @@
       }
     },
     {
-      "name": "Loewe",
-      "origin": "https://www.loewe.com",
-      "pdp": "https://www.loewe.com/eur/fr/femme/sacs/puzzle/petit-sac-puzzle-edge-en-cuir-de-veau-graine-souple/A510P60X77-5544.html",
+      "name": "Prada",
+      "origin": "https://www.prada.com",
+      "pdp": "https://www.prada.com/fr/fr/p/grand-sac-prada-galleria-en-cuir-saffiano/1BA506_NZV_F0002_V_EPP",
       "agentic": {
         "score_0_100": 26.0,
         "score_1_10": 2.6,
@@ -1455,6 +1343,54 @@
       }
     },
     {
+      "name": "Rick Owens",
+      "origin": "https://www.rickowens.eu",
+      "pdp": "https://www.rickowens.eu/en-fr/products/ra01f0862lge09",
+      "agentic": {
+        "score_0_100": 20.0,
+        "score_1_10": 2.0,
+        "coverage_pct": 50,
+        "blocked": false,
+        "missing": [
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 100.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": true
+        },
+        "pdp": {
+          "status": 404,
+          "structured": {
+            "products": 0
+          },
+          "readability": {
+            "name": false,
+            "price": false,
+            "availability": false
+          }
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
       "name": "Alaïa",
       "origin": "https://www.maison-alaia.com",
       "pdp": "https://www.maison-alaia.com/fr-fr/product/chaussures-plates/ballerines-en-resille-AA3A029TK007999.html",
@@ -1486,6 +1422,54 @@
         },
         "pdp": {
           "status": 200,
+          "structured": {
+            "products": 0
+          },
+          "readability": {
+            "name": false,
+            "price": false,
+            "availability": false
+          }
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Loewe",
+      "origin": "https://www.loewe.com",
+      "pdp": "https://www.loewe.com/eur/fr/femme/sacs/puzzle/petit-sac-puzzle-edge-en-cuir-de-veau-graine-souple/A510P60X77-5544.html",
+      "agentic": {
+        "score_0_100": 16.0,
+        "score_1_10": 1.6,
+        "coverage_pct": 50,
+        "blocked": false,
+        "missing": [
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 80.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "status": 404,
           "structured": {
             "products": 0
           },

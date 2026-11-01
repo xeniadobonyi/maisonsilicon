@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T13:50:22+00:00",
+  "generated_at": "2026-11-01T13:46:30+00:00",
   "weights": {
     "A": 25,
     "B": 15,
@@ -172,9 +172,159 @@
       }
     },
     {
+      "name": "Armani",
+      "origin": "https://www.armani.com",
+      "pdp": "https://www.armani.com/fr-fr/giorgio-armani/sac-a-bandouliere-en-cuir-graine-avec-pochette-zippee-cod-GW003752-AF14187-U8107/",
+      "agentic": {
+        "score_0_100": 97.5,
+        "score_1_10": 9.8,
+        "coverage_pct": 50,
+        "blocked": false,
+        "missing": [
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": 100.0,
+        "B": 100.0,
+        "C": 87.5,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "blocks bytespider, amazonbot",
+          "ai_score": 75.0,
+          "sitemap": true,
+          "llms_txt": true
+        },
+        "pdp": {
+          "status": 200,
+          "structured": {
+            "products": 1,
+            "price": true,
+            "availability": true
+          },
+          "readability": {
+            "name": true,
+            "price": true,
+            "availability": true
+          }
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Prada",
+      "origin": "https://www.prada.com",
+      "pdp": "https://www.prada.com/fr/fr/p/grand-sac-prada-galleria-en-cuir-saffiano/1BA506_NZV_F0002_V_EPP",
+      "agentic": {
+        "score_0_100": 96.0,
+        "score_1_10": 9.6,
+        "coverage_pct": 50,
+        "blocked": false,
+        "missing": [
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": 100.0,
+        "B": 100.0,
+        "C": 80.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "status": 200,
+          "structured": {
+            "products": 1,
+            "price": true,
+            "availability": true
+          },
+          "readability": {
+            "name": true,
+            "price": true,
+            "availability": true
+          }
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
       "name": "Miu Miu",
       "origin": "https://www.miumiu.com",
       "pdp": "https://www.miumiu.com/fr/fr/p/baskets-newbalance-xmiu-miu-530-sl-en-suede-et-mesh/5E165E_Z5O_F0379_F_D005",
+      "agentic": {
+        "score_0_100": 96.0,
+        "score_1_10": 9.6,
+        "coverage_pct": 50,
+        "blocked": false,
+        "missing": [
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": 100.0,
+        "B": 100.0,
+        "C": 80.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "status": 200,
+          "structured": {
+            "products": 1,
+            "price": true,
+            "availability": true
+          },
+          "readability": {
+            "name": true,
+            "price": true,
+            "availability": true
+          }
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
+      "name": "Dior",
+      "origin": "https://www.dior.com",
+      "pdp": "https://www.dior.com/fr_fr/fashion/products/M0455CBAA_M900",
       "agentic": {
         "score_0_100": 96.0,
         "score_1_10": 9.6,
@@ -272,56 +422,6 @@
       }
     },
     {
-      "name": "Maison Margiela",
-      "origin": "https://www.maisonmargiela.com",
-      "pdp": "https://www.maisonmargiela.com/fr-fr/ballerine-tabi-S58WZ0127P3753T8013.html",
-      "agentic": {
-        "score_0_100": 96.0,
-        "score_1_10": 9.6,
-        "coverage_pct": 50,
-        "blocked": false,
-        "missing": [
-          "D",
-          "E",
-          "F"
-        ]
-      },
-      "components": {
-        "A": 100.0,
-        "B": 100.0,
-        "C": 80.0,
-        "D": null,
-        "E": null,
-        "F": null
-      },
-      "detail": {
-        "access": {
-          "ai_access": "all AI agents allowed",
-          "ai_score": 100.0,
-          "sitemap": true,
-          "llms_txt": false
-        },
-        "pdp": {
-          "status": 200,
-          "structured": {
-            "products": 1,
-            "price": true,
-            "availability": true
-          },
-          "readability": {
-            "name": true,
-            "price": true,
-            "availability": true
-          }
-        },
-        "manual": {
-          "purchase": "",
-          "guest_checkout": "",
-          "payment_rails": ""
-        }
-      }
-    },
-    {
       "name": "Kenzo",
       "origin": "https://www.kenzo.com",
       "pdp": "https://www.kenzo.com/fr-fr/cape-militaire-kenzo-checks-en-laine-melangee/FG62MA2509PB.03.html",
@@ -348,56 +448,6 @@
         "access": {
           "ai_access": "all AI agents allowed",
           "ai_score": 100.0,
-          "sitemap": true,
-          "llms_txt": false
-        },
-        "pdp": {
-          "status": 200,
-          "structured": {
-            "products": 1,
-            "price": true,
-            "availability": true
-          },
-          "readability": {
-            "name": true,
-            "price": true,
-            "availability": true
-          }
-        },
-        "manual": {
-          "purchase": "",
-          "guest_checkout": "",
-          "payment_rails": ""
-        }
-      }
-    },
-    {
-      "name": "Armani",
-      "origin": "https://www.armani.com",
-      "pdp": "https://www.armani.com/fr-fr/giorgio-armani/sac-a-bandouliere-en-cuir-graine-avec-pochette-zippee-cod-GW003752-AF14187-U8107/",
-      "agentic": {
-        "score_0_100": 93.5,
-        "score_1_10": 9.3,
-        "coverage_pct": 50,
-        "blocked": false,
-        "missing": [
-          "D",
-          "E",
-          "F"
-        ]
-      },
-      "components": {
-        "A": 100.0,
-        "B": 100.0,
-        "C": 67.5,
-        "D": null,
-        "E": null,
-        "F": null
-      },
-      "detail": {
-        "access": {
-          "ai_access": "blocks bytespider, amazonbot",
-          "ai_score": 75.0,
           "sitemap": true,
           "llms_txt": false
         },
@@ -678,49 +728,6 @@
             "price": true,
             "availability": false
           }
-        },
-        "manual": {
-          "purchase": "",
-          "guest_checkout": "",
-          "payment_rails": ""
-        }
-      }
-    },
-    {
-      "name": "Dior",
-      "origin": "https://www.dior.com",
-      "pdp": "https://www.dior.com/fr_fr/fashion/products/M0455CBAA_M900",
-      "agentic": {
-        "score_0_100": 50.0,
-        "score_1_10": 5.0,
-        "coverage_pct": 10,
-        "blocked": true,
-        "missing": [
-          "A",
-          "B",
-          "D",
-          "E",
-          "F"
-        ]
-      },
-      "components": {
-        "A": null,
-        "B": null,
-        "C": 50.0,
-        "D": null,
-        "E": null,
-        "F": null
-      },
-      "detail": {
-        "access": {
-          "ai_access": "all AI agents allowed",
-          "ai_score": 100.0,
-          "sitemap": false,
-          "llms_txt": false
-        },
-        "pdp": {
-          "blocked": true,
-          "status": 403
         },
         "manual": {
           "purchase": "",
@@ -1071,6 +1078,49 @@
       }
     },
     {
+      "name": "Maison Margiela",
+      "origin": "https://www.maisonmargiela.com",
+      "pdp": "https://www.maisonmargiela.com/fr-fr/ballerine-tabi-S58WZ0127P3753T8013.html",
+      "agentic": {
+        "score_0_100": 50.0,
+        "score_1_10": 5.0,
+        "coverage_pct": 10,
+        "blocked": true,
+        "missing": [
+          "A",
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": null,
+        "B": null,
+        "C": 50.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": false,
+          "llms_txt": false
+        },
+        "pdp": {
+          "blocked": true,
+          "status": 403
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
       "name": "Jacquemus",
       "origin": "https://www.jacquemus.com",
       "pdp": null,
@@ -1247,54 +1297,6 @@
       }
     },
     {
-      "name": "Prada",
-      "origin": "https://www.prada.com",
-      "pdp": "https://www.prada.com/fr/fr/p/grand-sac-prada-galleria-en-cuir-saffiano/1BA506_NZV_F0002_V_EPP",
-      "agentic": {
-        "score_0_100": 26.0,
-        "score_1_10": 2.6,
-        "coverage_pct": 50,
-        "blocked": false,
-        "missing": [
-          "D",
-          "E",
-          "F"
-        ]
-      },
-      "components": {
-        "A": 0.0,
-        "B": 33.3,
-        "C": 80.0,
-        "D": null,
-        "E": null,
-        "F": null
-      },
-      "detail": {
-        "access": {
-          "ai_access": "all AI agents allowed",
-          "ai_score": 100.0,
-          "sitemap": true,
-          "llms_txt": false
-        },
-        "pdp": {
-          "status": 200,
-          "structured": {
-            "products": 0
-          },
-          "readability": {
-            "name": true,
-            "price": false,
-            "availability": false
-          }
-        },
-        "manual": {
-          "purchase": "",
-          "guest_checkout": "",
-          "payment_rails": ""
-        }
-      }
-    },
-    {
       "name": "Acne Studios",
       "origin": "https://www.acnestudios.com",
       "pdp": "https://www.acnestudios.com/fr/fr/musubi-midi-new-r/A10361-900.html?g=man",
@@ -1343,6 +1345,54 @@
       }
     },
     {
+      "name": "Alaïa",
+      "origin": "https://www.maison-alaia.com",
+      "pdp": "https://www.maison-alaia.com/fr-fr/product/chaussures-plates/ballerines-en-resille-AA3A029TK007999.html",
+      "agentic": {
+        "score_0_100": 20.0,
+        "score_1_10": 2.0,
+        "coverage_pct": 50,
+        "blocked": false,
+        "missing": [
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "components": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 100.0,
+        "D": null,
+        "E": null,
+        "F": null
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": true
+        },
+        "pdp": {
+          "status": 200,
+          "structured": {
+            "products": 0
+          },
+          "readability": {
+            "name": false,
+            "price": false,
+            "availability": false
+          }
+        },
+        "manual": {
+          "purchase": "",
+          "guest_checkout": "",
+          "payment_rails": ""
+        }
+      }
+    },
+    {
       "name": "Rick Owens",
       "origin": "https://www.rickowens.eu",
       "pdp": "https://www.rickowens.eu/en-fr/products/ra01f0862lge09",
@@ -1374,54 +1424,6 @@
         },
         "pdp": {
           "status": 404,
-          "structured": {
-            "products": 0
-          },
-          "readability": {
-            "name": false,
-            "price": false,
-            "availability": false
-          }
-        },
-        "manual": {
-          "purchase": "",
-          "guest_checkout": "",
-          "payment_rails": ""
-        }
-      }
-    },
-    {
-      "name": "Alaïa",
-      "origin": "https://www.maison-alaia.com",
-      "pdp": "https://www.maison-alaia.com/fr-fr/product/chaussures-plates/ballerines-en-resille-AA3A029TK007999.html",
-      "agentic": {
-        "score_0_100": 16.0,
-        "score_1_10": 1.6,
-        "coverage_pct": 50,
-        "blocked": false,
-        "missing": [
-          "D",
-          "E",
-          "F"
-        ]
-      },
-      "components": {
-        "A": 0.0,
-        "B": 0.0,
-        "C": 80.0,
-        "D": null,
-        "E": null,
-        "F": null
-      },
-      "detail": {
-        "access": {
-          "ai_access": "all AI agents allowed",
-          "ai_score": 100.0,
-          "sitemap": true,
-          "llms_txt": false
-        },
-        "pdp": {
-          "status": 200,
           "structured": {
             "products": 0
           },

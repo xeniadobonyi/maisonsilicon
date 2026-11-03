@@ -30,6 +30,10 @@
   .views button.on{background:#000000; color:#ffffff; font-weight:bold;}
   .sub{font-variant-numeric:tabular-nums;}
   .muted{color:#555555;}
+  #explain{max-width:72ch; margin:10px 0 14px;}
+  #explain p{margin:5px 0; font-size:14px;}
+  .scorecell{font-variant-numeric:tabular-nums; min-width:140px; text-align:left;}
+  .desc{font-size:12px; color:#555555; margin-top:3px; max-width:230px; line-height:1.3;}
 </style>
 </head>
 <body>
@@ -37,6 +41,11 @@
 <h1>Maison &amp; Silicon</h1>
 <p>Luxury and premium-tech brands, rated on performance, design, and agentic readiness &middot; 2026 edition</p>
 <p id="asof"></p>
+
+<div id="explain">
+  <p><b>Performance</b> — how fast and smooth the site feels for real visitors. Using Google's data from actual Chrome users, we look at three things, on phone and desktop: how quickly the main content appears, how fast the page reacts when you tap, and how much the layout jumps around while it loads. Quicker and steadier earns a higher grade.</p>
+  <p><b>Agentic readiness</b> — how ready the site is for an AI shopping assistant to act on your behalf. We check whether an automated agent can read the products, reach the page without being blocked, and actually complete a purchase — and whether checkout forces an account or supports AI-driven payment. The more an agent could find and buy on its own, the higher the grade.</p>
+</div>
 
 <div class="views" id="views">
   <button data-view="performance">Performance</button>
@@ -167,7 +176,7 @@ function renderPerformance(list){
     const p=r.perf, s=r.perfScore;
     return "<tr><td class='num'>"+(i+1)+"</td>"+brandCell(r)+
       "<td>"+vitals(p&&p.phone)+"</td><td>"+vitals(p&&p.desktop)+"</td>"+
-      "<td>"+trendText(r.hist)+"</td>"+gradeScore(s)+"</tr>";
+      "<td>"+trendText(r.hist)+"</td>"+gradeScore(s, perfLine(r))+"</tr>";
   }).join("");
   return {head, rows};
 }
@@ -194,13 +203,14 @@ function renderAgentic(list){
     const s=r.agScore, cov=r.ag&&r.ag.agentic? r.ag.agentic.coverage_pct : null;
     const covTxt = cov==null? "\u2014" : cov+"%"+(r.ag.agentic.blocked?" (blocked)":"");
     return "<tr><td class='num'>"+(i+1)+"</td>"+brandCell(r)+
-      "<td>"+agSignals(r.ag)+"</td><td class='small'>"+covTxt+"</td>"+gradeScore(s)+"</tr>";
+      "<td>"+agSignals(r.ag)+"</td><td class='small'>"+covTxt+"</td>"+gradeScore(s, agenticLine(r))+"</tr>";
   }).join("");
   return {head, rows};
 }
 
 /* ---------- Mixed view ---------- */
-function subScore(s){ return s==null? '<span class="muted">\u2014</span>' : s+' <span class="small">('+gradeFor(s)+')</span>'; }
+function subScore(s, line){ const d=line?'<div class="desc">'+esc(line)+'</div>':'';
+  return (s==null? '<span class="muted">\u2014</span>' : s+' <span class="small">('+gradeFor(s)+')</span>')+d; }
 function renderMixed(list){
   const head='<tr><th>#</th><th>Brand</th><th>Performance</th><th>Agentic</th>'+
              '<th>Grade</th><th class="num">Mixed</th></tr>';
@@ -209,8 +219,8 @@ function renderMixed(list){
     'It will blend automatically once the agentic workflow has run.</p>';
   const rows = list.map((r,i)=>{
     return "<tr><td class='num'>"+(i+1)+"</td>"+brandCell(r)+
-      "<td class='sub'>"+subScore(r.perfScore)+"</td>"+
-      "<td class='sub'>"+subScore(r.agScore)+"</td>"+
+      "<td class='sub'>"+subScore(r.perfScore, perfLine(r))+"</td>"+
+      "<td class='sub'>"+subScore(r.agScore, agenticLine(r))+"</td>"+
       gradeScore(r.mixedScore)+"</tr>";
   }).join("");
   return {head, rows, note};
@@ -221,10 +231,46 @@ function brandCell(r){
   const nm = r.origin ? '<a href="'+esc(r.origin)+'" target="_blank" rel="noopener">'+esc(r.name)+'</a>' : esc(r.name);
   return "<td>"+nm+"<br><span class='small muted'>"+esc(r.category||"")+"</span></td>";
 }
-function gradeScore(s){
-  if(s==null) return '<td class="grade">NR</td><td class="num muted">\u2014</td>';
-  return '<td class="grade">'+gradeFor(s)+'</td><td class="num sub">'+s+
-         '<br><span class="small">'+(Math.round(s)/10).toFixed(1)+' / 10</span></td>';
+function gradeScore(s, line){
+  const desc = line ? '<div class="desc">'+esc(line)+'</div>' : '';
+  if(s==null) return '<td class="grade">NR</td><td class="scorecell muted">\u2014'+desc+'</td>';
+  return '<td class="grade">'+gradeFor(s)+'</td><td class="scorecell"><span class="sub">'+s+
+         '</span> <span class="small">/ '+(Math.round(s)/10).toFixed(1)+'</span>'+desc+'</td>';
+}
+
+/* ---------- factual per-score lines (derived from the data) ---------- */
+function perfLine(r){
+  const p=r.perf; if(!p) return "No field data.";
+  const m=p.phone, d=p.desktop;
+  function bad(ff){ const o=[]; if(!ff) return o;
+    if(ff.lcp_ms!=null && ff.lcp_ms>2500) o.push("LCP");
+    if(ff.inp_ms!=null && ff.inp_ms>200) o.push("INP");
+    if(ff.cls!=null && ff.cls>0.1) o.push("CLS");
+    return o; }
+  const mb=bad(m), db=bad(d);
+  if(m && d && !mb.length && !db.length) return "Fast and stable on phone and desktop.";
+  const onMobile = mb.length>0;
+  const ff = onMobile? m : d, where = onMobile? "mobile" : "desktop";
+  const issues = onMobile? mb : db, phr=[];
+  if(issues.includes("LCP")) phr.push("slow "+where+" load ("+(ff.lcp_ms/1000).toFixed(1)+"s)");
+  if(issues.includes("CLS")) phr.push(where+" layout shift");
+  if(issues.includes("INP")) phr.push("laggy "+where+" response ("+ff.inp_ms+"ms)");
+  const s=phr.join(", ");
+  return s.charAt(0).toUpperCase()+s.slice(1)+".";
+}
+function agenticLine(r){
+  const ag=r.ag; if(!ag) return "Not yet measured.";
+  const a=ag.agentic||{}, c=ag.components||{}, man=(ag.detail&&ag.detail.manual)||{};
+  if(a.blocked) return "Storefront blocks automated agents.";
+  const A=c.A; let data;
+  if(A==null) data = ag.pdp ? "Product data couldn\u2019t be read" : "No product page checked";
+  else if(A>=70) data="Clean product data";
+  else if(A>=40) data="Partial product data";
+  else data="No machine-readable product data";
+  const pm={open:"buyable online", partial:"flagship not sold online",
+            gated:"purchase stays in-boutique", none:"no online sale"};
+  const pur=pm[man.purchase];
+  return pur ? data+"; "+pur+"." : data+".";
 }
 
 function setLegend(view){

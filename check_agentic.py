@@ -55,7 +55,47 @@ BLOCK_MARKERS = [
 ]
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-      "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
+      "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36")
+
+# Headers that make a headless context resemble a real Chrome.
+CH_HEADERS = {
+    "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
+    "sec-ch-ua": '"Chromium";v="131", "Google Chrome";v="131", "Not.A/Brand";v="24"',
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": '"Windows"',
+    "Upgrade-Insecure-Requests": "1",
+}
+
+# Injected before any page script runs: erase the obvious automation tells.
+STEALTH_JS = """
+Object.defineProperty(navigator, 'webdriver', {get: () => undefined});
+Object.defineProperty(navigator, 'languages', {get: () => ['fr-FR','fr','en']});
+Object.defineProperty(navigator, 'plugins', {get: () => [1,2,3,4,5]});
+window.chrome = window.chrome || {runtime: {}};
+const _q = navigator.permissions && navigator.permissions.query;
+if (_q) navigator.permissions.query = (p) =>
+  p && p.name === 'notifications'
+    ? Promise.resolve({state: Notification.permission})
+    : _q(p);
+const _gp = WebGLRenderingContext.prototype.getParameter;
+WebGLRenderingContext.prototype.getParameter = function(p){
+  if (p === 37445) return 'Intel Inc.';
+  if (p === 37446) return 'Intel Iris OpenGL Engine';
+  return _gp.call(this, p);
+};
+"""
+
+# Best-effort cookie-consent accept (OneTrust + Didomi cover most EU luxury).
+CONSENT_SELECTORS = [
+    "#onetrust-accept-btn-handler",
+    "#didomi-notice-agree-button",
+    "button[aria-label*='accept' i]",
+    "button[aria-label*='accepter' i]",
+    "button:has-text('Tout accepter')",
+    "button:has-text('Accept all')",
+    "button:has-text('Accepter')",
+    "button:has-text('Accept')",
+]
 
 
 # --------------------------------------------------------------------------
@@ -99,27 +139,52 @@ class Renderer:
         try:
             from playwright.sync_api import sync_playwright
             self._pw = sync_playwright().start()
-            self._browser = self._pw.chromium.launch(headless=True, args=["--no-sandbox"])
+            self._browser = self._pw.chromium.launch(
+                headless=True,
+                args=["--no-sandbox", "--disable-blink-features=AutomationControlled",
+                      "--disable-dev-shm-usage"],
+                ignore_default_args=["--enable-automation"],
+            )
             self.ok = True
         except Exception as e:  # noqa: BLE001
             self.err = f"{type(e).__name__}: {e}"
             self.ok = False
         return self
 
-    def render(self, url):
+    def render(self, url, _retry=True):
         if not self.ok:
             return None, "unavailable"
         ctx = None
         try:
-            ctx = self._browser.new_context(user_agent=UA, locale="fr-FR",
-                                            viewport={"width": 1366, "height": 900})
+            ctx = self._browser.new_context(
+                user_agent=UA, locale="fr-FR", timezone_id="Europe/Paris",
+                viewport={"width": 1366, "height": 900}, extra_http_headers=CH_HEADERS)
+            ctx.add_init_script(STEALTH_JS)
             page = ctx.new_page()
             page.goto(url, wait_until="domcontentloaded", timeout=45000)
+            # dismiss a cookie wall if one is up — it can gate the product markup
+            for sel in CONSENT_SELECTORS:
+                try:
+                    btn = page.locator(sel).first
+                    if btn.count() and btn.is_visible():
+                        btn.click(timeout=2000)
+                        break
+                except Exception:  # noqa: BLE001
+                    pass
+            # give client-rendered structured data a chance to appear
             try:
-                page.wait_for_load_state("networkidle", timeout=8000)
+                page.wait_for_selector("script[type='application/ld+json']", timeout=6000)
+            except Exception:  # noqa: BLE001
+                pass
+            try:
+                page.wait_for_load_state("networkidle", timeout=6000)
             except Exception:  # noqa: BLE001
                 pass
             html = page.content()
+            if _retry and detect_block(200, html):   # one retry on an interstitial
+                ctx.close()
+                ctx = None
+                return self.render(url, _retry=False)
             return html, "ok"
         except Exception as e:  # noqa: BLE001
             return None, f"render error: {type(e).__name__}"
@@ -256,7 +321,9 @@ def _types(node):
 
 
 def find_products(objs):
-    return [o for o in objs if any(t == "product" or t.endswith("product") for t in _types(o))]
+    # "product" as a substring catches Product, ProductGroup, ProductModel,
+    # IndividualProduct, etc. — markup shapes that an exact/suffix match missed.
+    return [o for o in objs if any("product" in t for t in _types(o))]
 
 
 def _offers(product):
@@ -324,6 +391,13 @@ def product_signals(html):
         sig["name"] = True
     if og_hit:
         sig["via"].append("og")
+
+    # Fallback: a Product declared in JSON-LD that failed to parse (malformed
+    # JSON, HTML entities) still counts as a product signal.
+    if not sig["product"] and re.search(r'"@type"\s*:\s*"[^"]*[Pp]roduct"', html):
+        sig["product"] = True
+        sig["via"].append("jsonld-raw")
+
     return sig
 
 

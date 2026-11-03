@@ -168,5 +168,10 @@
     "purchase": "open",
     "guest_checkout": "",
     "payment_rails": "none"
+  },
+  "Chanel": {
+    "purchase": "partial",
+    "guest_checkout": "",
+    "payment_rails": "none"
   }
 }

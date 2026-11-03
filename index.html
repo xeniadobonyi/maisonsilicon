@@ -64,7 +64,7 @@ function esc(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,
 function fmtDate(iso){ const d=new Date(iso); return isNaN(d)?(iso||""):d.toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"}); }
 
 let MODEL = [];      // merged brand rows
-let VIEW = "mixed";  // default
+let VIEW = "agentic";  // default
 let META = {perf:null, ag:null};
 
 async function boot(){

@@ -2,7 +2,6 @@ name: Monthly agentic check
 
 on:
   schedule:
-    # 06:30 UTC on the 1st — just after the performance job.
     - cron: "30 6 1 * *"
   workflow_dispatch: {}
 
@@ -12,12 +11,16 @@ permissions:
 jobs:
   agentic:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install Playwright + Chromium
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
       - name: Run agentic readiness check
         run: python check_agentic.py
       - name: Commit results

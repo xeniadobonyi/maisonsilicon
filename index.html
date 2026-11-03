@@ -35,23 +35,26 @@
   .scorecell{font-variant-numeric:tabular-nums; min-width:140px; text-align:left;}
   .desc{font-size:12px; color:#555555; margin-top:3px; max-width:230px; line-height:1.3;}
   .frame{color:#555555; font-size:14px; max-width:74ch; margin:4px 0 10px;}
+  .lead{font-size:18px; font-weight:bold; margin:12px 0 6px; max-width:74ch;}
+  #explain p, .thesis{max-width:74ch;}
 </style>
 </head>
 <body>
 
 <h1>Maison &amp; Silicon</h1>
-<p>Luxury maisons, rated on real-user performance and agentic-commerce readiness &middot; 2026 edition</p>
-<p class="frame">A transparent, opinionated read of 34 luxury houses with its method shown &mdash; not a definitive ranking. A subjective design axis and a premium-tech cohort are planned; today it covers the two axes below.</p>
+<p class="lead">No luxury house is ready for an AI agent to buy from.</p>
+<p class="thesis">The payment rails that let an agent actually transact don't exist at a single one of these 34 houses &mdash; that readiness is zero across the sector. So the index doesn't rank who an agent can buy from. It ranks who the agents already shopping for people can even <i>find and read</i>, and who locks them out at the door. Alongside that, it grades real-user site performance. &middot; 2026 edition</p>
+<p class="frame">A transparent, opinionated read with its method shown &mdash; not a definitive ranking. A subjective design axis and a premium-tech cohort are planned.</p>
 <p id="asof"></p>
 
 <div id="explain">
   <p><b>Performance</b> — how fast and smooth the site feels for real visitors. Using Google's data from actual Chrome users, we look at three things, on phone and desktop: how quickly the main content appears, how fast the page reacts when you tap, and how much the layout jumps around while it loads. Quicker and steadier earns a higher grade.</p>
-  <p><b>Agentic readiness</b> — how ready the site is for an AI shopping assistant to act on your behalf. We check whether an automated agent can read the products, reach the page without being blocked, and actually complete a purchase — and whether checkout forces an account or supports AI-driven payment. The more an agent could find and buy on its own, the higher the grade.</p>
+  <p><b>Legibility</b> — can the AI agents already shopping for people find and read this house? Since no agent can complete a purchase at any luxury brand yet, what decides whether a brand shows up in AI-driven shopping is whether an agent can read its products (clear data), reach its pages without being shut out, and get through checkout rather than hitting a wall. The more legible and reachable, the higher the grade. Houses that block automated reading entirely are set aside, not scored — blocking an anonymous scraper is a security choice, not a verdict.</p>
 </div>
 
 <div class="views" id="views">
   <button data-view="performance">Performance</button>
-  <button data-view="agentic">Agentic</button>
+  <button data-view="agentic">Legibility</button>
   <button data-view="mixed">Mixed</button>
 </div>
 
@@ -99,7 +102,7 @@ async function boot(){
   setView(VIEW);
 
   const bits = ["Performance as of <b>"+fmtDate(perf.generated_at)+"</b>"];
-  if(ag && ag.generated_at) bits.push("agentic as of <b>"+fmtDate(ag.generated_at)+"</b>");
+  if(ag && ag.generated_at) bits.push("legibility as of <b>"+fmtDate(ag.generated_at)+"</b>");
   document.getElementById("asof").innerHTML = bits.join(", ")+". Updated monthly.";
 }
 
@@ -125,7 +128,9 @@ function merge(perf, ag, history){
   if(ag) (ag.brands||[]).forEach(b=>{
     const row = byName[b.name] || (byName[b.name]={name:b.name, category:b.category, origin:b.origin,
       perf:null, perfScore:null, hist:[]});
-    row.ag = b; row.agScore = b.agentic? b.agentic.score_0_100 : null;
+    row.ag = b;
+    // A WAF block is a measurement gap, not a verdict — treat blocked as unmeasured
+    row.agScore = (b.agentic && !b.agentic.blocked) ? b.agentic.score_0_100 : null;
     if(!row.origin) row.origin = b.origin;
   });
   const rows = Object.values(byName);
@@ -196,28 +201,34 @@ function agSignals(ag){
 }
 function renderAgentic(list){
   if(!META.ag){
-    return {head:"", rows:"", note:'<p>Agentic data isn\u2019t published yet. Add PDP URLs and '+
+    return {head:"", rows:"", note:'<p>Legibility data isn\u2019t published yet. Add PDP URLs and '+
       'fill <code>agentic_manual.json</code>, then run the <b>Monthly agentic check</b> workflow.</p>'};
   }
+  const measured = list.filter(r => r.agScore != null);
+  const blocked = MODEL.filter(r => r.ag && r.ag.agentic && r.ag.agentic.blocked)
+                       .sort((a,b)=> a.name.localeCompare(b.name));
   const head='<tr><th>#</th><th>Brand</th><th>Signals</th><th>Coverage</th>'+
-             '<th>Grade</th><th class="num">Score</th></tr>';
-  const rows = list.map((r,i)=>{
+             '<th>Grade</th><th class="num">Legibility</th></tr>';
+  const rows = measured.map((r,i)=>{
     const s=r.agScore, cov=r.ag&&r.ag.agentic? r.ag.agentic.coverage_pct : null;
-    const covTxt = cov==null? "\u2014" : cov+"%"+(r.ag.agentic.blocked?" (blocked)":"");
+    const covTxt = cov==null? "\u2014" : cov+"%";
     return "<tr><td class='num'>"+(i+1)+"</td>"+brandCell(r, agenticLine(r))+
       "<td>"+agSignals(r.ag)+"</td><td class='small'>"+covTxt+"</td>"+gradeScore(s)+"</tr>";
   }).join("");
-  return {head, rows};
+  const note = blocked.length ?
+    '<p class="small" style="margin-top:16px; max-width:74ch;"><b>Couldn\u2019t be read ('+blocked.length+')</b> \u2014 these houses blocked automated reading behind enterprise bot protection. That\u2019s a security posture, not a verdict: blocking an anonymous scraper says nothing about whether the brand would admit a credentialed agent, so they\u2019re set aside rather than scored.<br>'+
+    blocked.map(r=>esc(r.name)).join(", ")+'.</p>' : "";
+  return {head, rows, note};
 }
 
 /* ---------- Mixed view ---------- */
 function subScore(s, line){ const d=line?'<div class="desc">'+esc(line)+'</div>':'';
   return (s==null? '<span class="muted">\u2014</span>' : s+' <span class="small">('+gradeFor(s)+')</span>')+d; }
 function renderMixed(list){
-  const head='<tr><th>#</th><th>Brand</th><th>Performance</th><th>Agentic</th>'+
+  const head='<tr><th>#</th><th>Brand</th><th>Performance</th><th>Legibility</th>'+
              '<th>Grade</th><th class="num">Mixed</th></tr>';
   const note = META.ag ? "" :
-    '<p class="muted">Agentic data not published yet \u2014 Mixed currently reflects performance only. '+
+    '<p class="muted">Legibility data not published yet \u2014 Mixed currently reflects performance only. '+
     'It will blend automatically once the agentic workflow has run.</p>';
   const rows = list.map((r,i)=>{
     return "<tr><td class='num'>"+(i+1)+"</td>"+brandCell(r)+
@@ -284,11 +295,11 @@ function setLegend(view){
     legend.innerHTML = grades+" \u201CMeets/below\u201D marks whether real-user LCP, INP and CLS are all in Google\u2019s good range.";
     footer.textContent = "Performance: Google CrUX field data, 75th percentile over 28 days, blended 65% mobile / 35% desktop.";
   } else if(view==="agentic"){
-    legend.innerHTML = grades+" Signals: schema (product structured data), access (AI-bot/sitemap/llms.txt), buy (can an agent purchase), rails (agentic payment support). Coverage shows how much of the score was measurable.";
-    footer.textContent = "Agentic readiness: automated checks for structured data, readability and agent access, plus manual judgment on checkout, purchase gating and payment rails.";
+    legend.innerHTML = grades+" Signals: schema (product data an agent can read), access (crawlable, open to AI bots), buy (can an agent reach and complete checkout). Coverage shows how much was measurable; houses that block automated reading are listed separately, not scored.";
+    footer.textContent = "Legibility: automated checks for machine-readable product data and agent access, plus judgment on checkout and purchase gating. No house supports agent payment rails yet — that readiness is zero across the sector, which is why it is the headline, not a scored factor.";
   } else {
-    legend.innerHTML = grades+" Mixed is an equal blend of the performance and agentic scores (a brand with only one axis available uses that axis).";
-    footer.textContent = "Mixed view averages the two axes. Design, the third axis, is not yet scored.";
+    legend.innerHTML = grades+" Mixed is an equal blend of the performance and legibility scores (a brand with only one measured uses that one).";
+    footer.textContent = "Mixed averages performance and legibility. A subjective design axis is not yet scored.";
   }
 }
 

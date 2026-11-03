@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T15:12:02+00:00",
+  "generated_at": "2026-11-03T15:50:59+00:00",
   "weights": {
     "A": 25,
     "B": 15,
@@ -206,9 +206,9 @@
           "llms_txt": false
         },
         "pdp": {
-          "a_source": "raw",
+          "a_source": "rendered",
           "raw_blocked": false,
-          "render": "render error: Error",
+          "render": "ok",
           "signals": {
             "name": true,
             "price": true,
@@ -255,9 +255,9 @@
           "llms_txt": false
         },
         "pdp": {
-          "a_source": "raw",
+          "a_source": "rendered",
           "raw_blocked": false,
-          "render": "render error: Error",
+          "render": "ok",
           "signals": {
             "name": true,
             "price": true,
@@ -374,6 +374,55 @@
       }
     },
     {
+      "name": "Chloé",
+      "origin": "https://www.chloe.com",
+      "pdp": "https://www.chloe.com/fr-fr/p/bags/shoulder-bag/CH25WS802P75001.html",
+      "agentic": {
+        "score_0_100": 85.9,
+        "score_1_10": 8.6,
+        "coverage_pct": 85,
+        "blocked": false,
+        "missing": [
+          "D"
+        ]
+      },
+      "components": {
+        "A": 100.0,
+        "B": 100.0,
+        "C": 80.0,
+        "D": null,
+        "E": 100,
+        "F": 0
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": true,
+          "llms_txt": false
+        },
+        "pdp": {
+          "a_source": "rendered",
+          "raw_blocked": false,
+          "render": "ok",
+          "signals": {
+            "name": true,
+            "price": true,
+            "availability": true,
+            "product": true,
+            "via": [
+              "json-ld"
+            ]
+          }
+        },
+        "manual": {
+          "purchase": "open",
+          "guest_checkout": "",
+          "payment_rails": "none"
+        }
+      }
+    },
+    {
       "name": "Kenzo",
       "origin": "https://www.kenzo.com",
       "pdp": "https://www.kenzo.com/fr-fr/cape-militaire-kenzo-checks-en-laine-melangee/FG62MA2509PB.03.html",
@@ -402,9 +451,265 @@
           "llms_txt": false
         },
         "pdp": {
-          "a_source": "raw",
+          "a_source": "rendered",
           "raw_blocked": false,
-          "render": "render blocked",
+          "render": "ok",
+          "signals": {
+            "name": true,
+            "price": true,
+            "availability": true,
+            "product": true,
+            "via": [
+              "json-ld"
+            ]
+          }
+        },
+        "manual": {
+          "purchase": "open",
+          "guest_checkout": "",
+          "payment_rails": "none"
+        }
+      }
+    },
+    {
+      "name": "Bottega Veneta",
+      "origin": "https://www.bottegaveneta.com",
+      "pdp": "https://www.bottegaveneta.com/en-fr/andiamo-sea-salt-766016VCPP19211.html",
+      "agentic": {
+        "score_0_100": 78.6,
+        "score_1_10": 7.9,
+        "coverage_pct": 70,
+        "blocked": false,
+        "missing": [
+          "B",
+          "D"
+        ]
+      },
+      "components": {
+        "A": 100.0,
+        "B": null,
+        "C": 50.0,
+        "D": null,
+        "E": 100,
+        "F": 0
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": false,
+          "llms_txt": false
+        },
+        "pdp": {
+          "a_source": "rendered",
+          "raw_blocked": true,
+          "render": "ok",
+          "signals": {
+            "name": true,
+            "price": true,
+            "availability": true,
+            "product": true,
+            "via": [
+              "json-ld",
+              "microdata",
+              "og"
+            ]
+          }
+        },
+        "manual": {
+          "purchase": "open",
+          "guest_checkout": "",
+          "payment_rails": "none"
+        }
+      }
+    },
+    {
+      "name": "Balenciaga",
+      "origin": "https://www.balenciaga.com",
+      "pdp": "https://www.balenciaga.com/en-fr/le-city-bag-medium-black-8657602ACFH1000.html",
+      "agentic": {
+        "score_0_100": 78.6,
+        "score_1_10": 7.9,
+        "coverage_pct": 70,
+        "blocked": false,
+        "missing": [
+          "B",
+          "D"
+        ]
+      },
+      "components": {
+        "A": 100.0,
+        "B": null,
+        "C": 50.0,
+        "D": null,
+        "E": 100,
+        "F": 0
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": false,
+          "llms_txt": false
+        },
+        "pdp": {
+          "a_source": "rendered",
+          "raw_blocked": true,
+          "render": "ok",
+          "signals": {
+            "name": true,
+            "price": true,
+            "availability": true,
+            "product": true,
+            "via": [
+              "json-ld",
+              "microdata",
+              "og"
+            ]
+          }
+        },
+        "manual": {
+          "purchase": "open",
+          "guest_checkout": "",
+          "payment_rails": "none"
+        }
+      }
+    },
+    {
+      "name": "Ferragamo",
+      "origin": "https://www.ferragamo.com",
+      "pdp": "https://www.ferragamo.com/shop/fra/fr/femmes/sacs-%C3%A0-main/Sacs-port%C3%A9-%C3%A9paule/hug-sh-s-793350--2",
+      "agentic": {
+        "score_0_100": 78.6,
+        "score_1_10": 7.9,
+        "coverage_pct": 70,
+        "blocked": false,
+        "missing": [
+          "B",
+          "D"
+        ]
+      },
+      "components": {
+        "A": 100.0,
+        "B": null,
+        "C": 50.0,
+        "D": null,
+        "E": 100,
+        "F": 0
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": false,
+          "llms_txt": false
+        },
+        "pdp": {
+          "a_source": "rendered",
+          "raw_blocked": true,
+          "render": "ok",
+          "signals": {
+            "name": true,
+            "price": true,
+            "availability": true,
+            "product": true,
+            "via": [
+              "json-ld",
+              "og"
+            ]
+          }
+        },
+        "manual": {
+          "purchase": "open",
+          "guest_checkout": "",
+          "payment_rails": "none"
+        }
+      }
+    },
+    {
+      "name": "Maison Margiela",
+      "origin": "https://www.maisonmargiela.com",
+      "pdp": "https://www.maisonmargiela.com/fr-fr/ballerine-tabi-S58WZ0127P3753T8013.html",
+      "agentic": {
+        "score_0_100": 78.6,
+        "score_1_10": 7.9,
+        "coverage_pct": 70,
+        "blocked": false,
+        "missing": [
+          "B",
+          "D"
+        ]
+      },
+      "components": {
+        "A": 100.0,
+        "B": null,
+        "C": 50.0,
+        "D": null,
+        "E": 100,
+        "F": 0
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": false,
+          "llms_txt": false
+        },
+        "pdp": {
+          "a_source": "rendered",
+          "raw_blocked": true,
+          "render": "ok",
+          "signals": {
+            "name": true,
+            "price": true,
+            "availability": true,
+            "product": true,
+            "via": [
+              "json-ld",
+              "og"
+            ]
+          }
+        },
+        "manual": {
+          "purchase": "open",
+          "guest_checkout": "",
+          "payment_rails": "none"
+        }
+      }
+    },
+    {
+      "name": "Givenchy",
+      "origin": "https://www.givenchy.com",
+      "pdp": "https://www.givenchy.com/fr/en/mini-antigona-bag-in-box-leather/BB5148B1R0-001.html",
+      "agentic": {
+        "score_0_100": 78.6,
+        "score_1_10": 7.9,
+        "coverage_pct": 70,
+        "blocked": false,
+        "missing": [
+          "B",
+          "D"
+        ]
+      },
+      "components": {
+        "A": 100.0,
+        "B": null,
+        "C": 50.0,
+        "D": null,
+        "E": 100,
+        "F": 0
+      },
+      "detail": {
+        "access": {
+          "ai_access": "all AI agents allowed",
+          "ai_score": 100.0,
+          "sitemap": false,
+          "llms_txt": false
+        },
+        "pdp": {
+          "a_source": "rendered",
+          "raw_blocked": true,
+          "render": "ok",
           "signals": {
             "name": true,
             "price": true,
@@ -776,90 +1081,6 @@
       }
     },
     {
-      "name": "Saint Laurent",
-      "origin": "https://www.ysl.com",
-      "pdp": "https://www.ysl.com/fr-fr/pr/mombasa-medium-en-cuir-862029AAGWJ1000.html",
-      "agentic": {
-        "score_0_100": 66.7,
-        "score_1_10": 6.7,
-        "coverage_pct": 45,
-        "blocked": true,
-        "missing": [
-          "A",
-          "B",
-          "D"
-        ]
-      },
-      "components": {
-        "A": null,
-        "B": null,
-        "C": 50.0,
-        "D": null,
-        "E": 100,
-        "F": 0
-      },
-      "detail": {
-        "access": {
-          "ai_access": "all AI agents allowed",
-          "ai_score": 100.0,
-          "sitemap": false,
-          "llms_txt": false
-        },
-        "pdp": {
-          "blocked": true,
-          "raw_status": 403,
-          "render": "render blocked"
-        },
-        "manual": {
-          "purchase": "open",
-          "guest_checkout": "",
-          "payment_rails": "none"
-        }
-      }
-    },
-    {
-      "name": "Bottega Veneta",
-      "origin": "https://www.bottegaveneta.com",
-      "pdp": "https://www.bottegaveneta.com/en-fr/andiamo-sea-salt-766016VCPP19211.html",
-      "agentic": {
-        "score_0_100": 66.7,
-        "score_1_10": 6.7,
-        "coverage_pct": 45,
-        "blocked": true,
-        "missing": [
-          "A",
-          "B",
-          "D"
-        ]
-      },
-      "components": {
-        "A": null,
-        "B": null,
-        "C": 50.0,
-        "D": null,
-        "E": 100,
-        "F": 0
-      },
-      "detail": {
-        "access": {
-          "ai_access": "all AI agents allowed",
-          "ai_score": 100.0,
-          "sitemap": false,
-          "llms_txt": false
-        },
-        "pdp": {
-          "blocked": true,
-          "raw_status": 403,
-          "render": "render blocked"
-        },
-        "manual": {
-          "purchase": "open",
-          "guest_checkout": "",
-          "payment_rails": "none"
-        }
-      }
-    },
-    {
       "name": "Gucci",
       "origin": "https://www.gucci.com",
       "pdp": "https://www.gucci.com/fr/fr/pr/women/shoes-for-women/mules-for-women/womens-princetown-slipper-p-813864AADCW1000",
@@ -892,7 +1113,7 @@
         "pdp": {
           "blocked": true,
           "raw_status": null,
-          "render": "render error: Error"
+          "render": "render blocked"
         },
         "manual": {
           "purchase": "open",
@@ -934,48 +1155,6 @@
         "pdp": {
           "blocked": true,
           "raw_status": null,
-          "render": "render error: Error"
-        },
-        "manual": {
-          "purchase": "open",
-          "guest_checkout": "",
-          "payment_rails": "none"
-        }
-      }
-    },
-    {
-      "name": "Balenciaga",
-      "origin": "https://www.balenciaga.com",
-      "pdp": "https://www.balenciaga.com/en-fr/le-city-bag-medium-black-8657602ACFH1000.html",
-      "agentic": {
-        "score_0_100": 66.7,
-        "score_1_10": 6.7,
-        "coverage_pct": 45,
-        "blocked": true,
-        "missing": [
-          "A",
-          "B",
-          "D"
-        ]
-      },
-      "components": {
-        "A": null,
-        "B": null,
-        "C": 50.0,
-        "D": null,
-        "E": 100,
-        "F": 0
-      },
-      "detail": {
-        "access": {
-          "ai_access": "all AI agents allowed",
-          "ai_score": 100.0,
-          "sitemap": false,
-          "llms_txt": false
-        },
-        "pdp": {
-          "blocked": true,
-          "raw_status": 403,
           "render": "render blocked"
         },
         "manual": {
@@ -1070,90 +1249,6 @@
       }
     },
     {
-      "name": "Ferragamo",
-      "origin": "https://www.ferragamo.com",
-      "pdp": "https://www.ferragamo.com/shop/fra/fr/femmes/sacs-%C3%A0-main/Sacs-port%C3%A9-%C3%A9paule/hug-sh-s-793350--2",
-      "agentic": {
-        "score_0_100": 66.7,
-        "score_1_10": 6.7,
-        "coverage_pct": 45,
-        "blocked": true,
-        "missing": [
-          "A",
-          "B",
-          "D"
-        ]
-      },
-      "components": {
-        "A": null,
-        "B": null,
-        "C": 50.0,
-        "D": null,
-        "E": 100,
-        "F": 0
-      },
-      "detail": {
-        "access": {
-          "ai_access": "all AI agents allowed",
-          "ai_score": 100.0,
-          "sitemap": false,
-          "llms_txt": false
-        },
-        "pdp": {
-          "blocked": true,
-          "raw_status": 403,
-          "render": "render blocked"
-        },
-        "manual": {
-          "purchase": "open",
-          "guest_checkout": "",
-          "payment_rails": "none"
-        }
-      }
-    },
-    {
-      "name": "Maison Margiela",
-      "origin": "https://www.maisonmargiela.com",
-      "pdp": "https://www.maisonmargiela.com/fr-fr/ballerine-tabi-S58WZ0127P3753T8013.html",
-      "agentic": {
-        "score_0_100": 66.7,
-        "score_1_10": 6.7,
-        "coverage_pct": 45,
-        "blocked": true,
-        "missing": [
-          "A",
-          "B",
-          "D"
-        ]
-      },
-      "components": {
-        "A": null,
-        "B": null,
-        "C": 50.0,
-        "D": null,
-        "E": 100,
-        "F": 0
-      },
-      "detail": {
-        "access": {
-          "ai_access": "all AI agents allowed",
-          "ai_score": 100.0,
-          "sitemap": false,
-          "llms_txt": false
-        },
-        "pdp": {
-          "blocked": true,
-          "raw_status": 403,
-          "render": "render blocked"
-        },
-        "manual": {
-          "purchase": "open",
-          "guest_checkout": "",
-          "payment_rails": "none"
-        }
-      }
-    },
-    {
       "name": "Jacquemus",
       "origin": "https://www.jacquemus.com",
       "pdp": null,
@@ -1194,24 +1289,22 @@
       }
     },
     {
-      "name": "Givenchy",
-      "origin": "https://www.givenchy.com",
-      "pdp": "https://www.givenchy.com/fr/en/mini-antigona-bag-in-box-leather/BB5148B1R0-001.html",
+      "name": "Alaïa",
+      "origin": "https://www.maison-alaia.com",
+      "pdp": "https://www.maison-alaia.com/fr-fr/product/chaussures-plates/ballerines-en-resille-AA3A029TK007999.html",
       "agentic": {
-        "score_0_100": 66.7,
-        "score_1_10": 6.7,
-        "coverage_pct": 45,
-        "blocked": true,
+        "score_0_100": 58.8,
+        "score_1_10": 5.9,
+        "coverage_pct": 85,
+        "blocked": false,
         "missing": [
-          "A",
-          "B",
           "D"
         ]
       },
       "components": {
-        "A": null,
-        "B": null,
-        "C": 50.0,
+        "A": 40.0,
+        "B": 33.3,
+        "C": 100.0,
         "D": null,
         "E": 100,
         "F": 0
@@ -1220,13 +1313,22 @@
         "access": {
           "ai_access": "all AI agents allowed",
           "ai_score": 100.0,
-          "sitemap": false,
-          "llms_txt": false
+          "sitemap": true,
+          "llms_txt": true
         },
         "pdp": {
-          "blocked": true,
-          "raw_status": 403,
-          "render": "render blocked"
+          "a_source": "rendered",
+          "raw_blocked": false,
+          "render": "ok",
+          "signals": {
+            "name": true,
+            "price": false,
+            "availability": false,
+            "product": true,
+            "via": [
+              "json-ld"
+            ]
+          }
         },
         "manual": {
           "purchase": "open",
@@ -1419,9 +1521,9 @@
       }
     },
     {
-      "name": "Louis Vuitton",
-      "origin": "https://us.louisvuitton.com",
-      "pdp": "https://fr.louisvuitton.com/fra-fr/produits/sac-neverfull-mm-monogram-nvprod5350101v/M46987",
+      "name": "Saint Laurent",
+      "origin": "https://www.ysl.com",
+      "pdp": "https://www.ysl.com/fr-fr/pr/mombasa-medium-en-cuir-862029AAGWJ1000.html",
       "agentic": {
         "score_0_100": 42.9,
         "score_1_10": 4.3,
@@ -1467,22 +1569,23 @@
       }
     },
     {
-      "name": "Alaïa",
-      "origin": "https://www.maison-alaia.com",
-      "pdp": "https://www.maison-alaia.com/fr-fr/product/chaussures-plates/ballerines-en-resille-AA3A029TK007999.html",
+      "name": "Louis Vuitton",
+      "origin": "https://us.louisvuitton.com",
+      "pdp": "https://fr.louisvuitton.com/fra-fr/produits/sac-neverfull-mm-monogram-nvprod5350101v/M46987",
       "agentic": {
-        "score_0_100": 41.2,
-        "score_1_10": 4.1,
-        "coverage_pct": 85,
+        "score_0_100": 42.9,
+        "score_1_10": 4.3,
+        "coverage_pct": 70,
         "blocked": false,
         "missing": [
+          "B",
           "D"
         ]
       },
       "components": {
         "A": 0.0,
-        "B": 0.0,
-        "C": 100.0,
+        "B": null,
+        "C": 50.0,
         "D": null,
         "E": 100,
         "F": 0
@@ -1491,59 +1594,12 @@
         "access": {
           "ai_access": "all AI agents allowed",
           "ai_score": 100.0,
-          "sitemap": true,
-          "llms_txt": true
-        },
-        "pdp": {
-          "a_source": "rendered",
-          "raw_blocked": false,
-          "render": "ok",
-          "signals": {
-            "name": false,
-            "price": false,
-            "availability": false,
-            "product": false,
-            "via": []
-          }
-        },
-        "manual": {
-          "purchase": "open",
-          "guest_checkout": "",
-          "payment_rails": "none"
-        }
-      }
-    },
-    {
-      "name": "Chloé",
-      "origin": "https://www.chloe.com",
-      "pdp": "https://www.chloe.com/fr-fr/p/bags/shoulder-bag/CH25WS802P75001.html",
-      "agentic": {
-        "score_0_100": 38.8,
-        "score_1_10": 3.9,
-        "coverage_pct": 85,
-        "blocked": false,
-        "missing": [
-          "D"
-        ]
-      },
-      "components": {
-        "A": 0.0,
-        "B": 0.0,
-        "C": 80.0,
-        "D": null,
-        "E": 100,
-        "F": 0
-      },
-      "detail": {
-        "access": {
-          "ai_access": "all AI agents allowed",
-          "ai_score": 100.0,
-          "sitemap": true,
+          "sitemap": false,
           "llms_txt": false
         },
         "pdp": {
           "a_source": "rendered",
-          "raw_blocked": false,
+          "raw_blocked": true,
           "render": "ok",
           "signals": {
             "name": false,

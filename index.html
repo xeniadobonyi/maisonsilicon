@@ -174,9 +174,9 @@ function renderPerformance(list){
              '<th>Trend</th><th>Grade</th><th class="num">Score</th></tr>';
   const rows = list.map((r,i)=>{
     const p=r.perf, s=r.perfScore;
-    return "<tr><td class='num'>"+(i+1)+"</td>"+brandCell(r)+
+    return "<tr><td class='num'>"+(i+1)+"</td>"+brandCell(r, perfLine(r))+
       "<td>"+vitals(p&&p.phone)+"</td><td>"+vitals(p&&p.desktop)+"</td>"+
-      "<td>"+trendText(r.hist)+"</td>"+gradeScore(s, perfLine(r))+"</tr>";
+      "<td>"+trendText(r.hist)+"</td>"+gradeScore(s)+"</tr>";
   }).join("");
   return {head, rows};
 }
@@ -202,8 +202,8 @@ function renderAgentic(list){
   const rows = list.map((r,i)=>{
     const s=r.agScore, cov=r.ag&&r.ag.agentic? r.ag.agentic.coverage_pct : null;
     const covTxt = cov==null? "\u2014" : cov+"%"+(r.ag.agentic.blocked?" (blocked)":"");
-    return "<tr><td class='num'>"+(i+1)+"</td>"+brandCell(r)+
-      "<td>"+agSignals(r.ag)+"</td><td class='small'>"+covTxt+"</td>"+gradeScore(s, agenticLine(r))+"</tr>";
+    return "<tr><td class='num'>"+(i+1)+"</td>"+brandCell(r, agenticLine(r))+
+      "<td>"+agSignals(r.ag)+"</td><td class='small'>"+covTxt+"</td>"+gradeScore(s)+"</tr>";
   }).join("");
   return {head, rows};
 }
@@ -227,9 +227,10 @@ function renderMixed(list){
 }
 
 /* ---------- shared cells ---------- */
-function brandCell(r){
+function brandCell(r, line){
   const nm = r.origin ? '<a href="'+esc(r.origin)+'" target="_blank" rel="noopener">'+esc(r.name)+'</a>' : esc(r.name);
-  return "<td>"+nm+"<br><span class='small muted'>"+esc(r.category||"")+"</span></td>";
+  const d = line ? '<div class="desc">'+esc(line)+'</div>' : '';
+  return "<td>"+nm+"<br><span class='small muted'>"+esc(r.category||"")+"</span>"+d+"</td>";
 }
 function gradeScore(s, line){
   const desc = line ? '<div class="desc">'+esc(line)+'</div>' : '';

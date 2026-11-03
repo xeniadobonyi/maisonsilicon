@@ -2,33 +2,34 @@ name: Monthly performance check
 
 on:
   schedule:
-    # 06:00 UTC on the 1st of every month.
     - cron: "0 6 1 * *"
-  workflow_dispatch: {}   # lets you trigger a run manually from the Actions tab
+  workflow_dispatch: {}
 
 permissions:
-  contents: write         # needed so the job can commit results back
+  contents: write
 
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 15    # CrUX is a fast API call, not a page load
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
       - name: Run CrUX field check
         env:
           CRUX_API_KEY: ${{ secrets.CRUX_API_KEY }}
         run: python check_performance.py
-
       - name: Commit results
         run: |
           git config user.name "perf-bot"
           git config user.email "actions@users.noreply.github.com"
           git add results/
-          git diff --staged --quiet || git commit -m "Monthly performance update $(date -u +%F)"
-          git push
+          if git diff --staged --quiet; then
+            echo "no changes to commit"
+          else
+            git commit -m "Monthly performance update $(date -u +%F)"
+            git pull --rebase --autostash origin main
+            git push origin HEAD:main
+          fi

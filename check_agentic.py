@@ -37,7 +37,10 @@ import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 
-WEIGHTS = {"A": 25, "B": 15, "C": 10, "D": 15, "E": 25, "F": 10}
+# Payment rails (F) are intentionally dropped from the weighting: they are
+# "none" for every brand today, so the factor discriminates nothing and only
+# depresses scores. That industry-wide zero is surfaced as the headline instead.
+WEIGHTS = {"A": 25, "B": 15, "C": 10, "D": 20, "E": 30}
 TOTAL_WEIGHT = sum(WEIGHTS.values())
 
 PURCHASE = {"open": 100, "partial": 50, "gated": 15, "none": 0}          # E

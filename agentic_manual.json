@@ -5,168 +5,168 @@
     "payment_rails": "live | announced | none    (Visa Intelligent Commerce / Mastercard Agent Pay / etc.)"
   },
   "Celine": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Hermès": {
-    "purchase": "",
+    "purchase": "partial",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Alaïa": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Prada": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Miu Miu": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Dior": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Saint Laurent": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Bottega Veneta": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Gucci": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Fendi": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Marc Jacobs": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Balenciaga": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Burberry": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Ralph Lauren": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Valentino": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Versace": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Alexander McQueen": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Stella McCartney": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Loewe": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "The Row": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Chloé": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Ferragamo": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Rick Owens": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Armani": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Maison Margiela": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Balmain": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Kenzo": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Jean Paul Gaultier": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Jacquemus": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Cartier": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Louis Vuitton": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Givenchy": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   },
   "Acne Studios": {
-    "purchase": "",
+    "purchase": "open",
     "guest_checkout": "",
-    "payment_rails": ""
+    "payment_rails": "none"
   }
 }
